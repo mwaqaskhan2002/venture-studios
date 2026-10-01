@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Find the right way to contribute to Home Pakistan Venture Studio. Apply as a Mentor, Co-Founder, or submit your Business Idea.">
+  <title>Apply & Contribute — Home Pakistan Venture Studio</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/webp" href="./images/Logo.webp">
+  <link rel="shortcut icon" type="image/webp" href="./images/Logo.webp">
+
+  <!-- Google Fonts: Inter & Sora -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="application.css">
+
+  <!-- Shared Header CSS -->
+  <link rel="stylesheet" href="./components/header.css">
+
+  <!-- Shared Footer CSS -->
+  <link rel="stylesheet" href="./components/footer.css">
+</head>
+
+<body>
+
+  <div id="header"></div>
+  <!-- ==========================================================================
+       2. Hero Section
+       ========================================================================== -->
+  <section class="form-hero-section text-center position-relative overflow-hidden" id="formHero">
+    <!-- Backdrop Image & Overlay -->
+    <img src="images/formHeroBackground.png" alt="Hero Backdrop" class="form-hero-backdrop">
+    <div class="form-hero-overlay"></div>
+
+    <div class="container position-relative py-lg-4" style="z-index: 2;">
+      <!-- Eyebrow Tag -->
+      <div class="d-inline-flex align-items-center gap-2 mb-3 px-3 py-1 rounded-pill">
+        <span class="eyebrow-dot"></span>
+        <span class="text-uppercase fw-bold eyebrow-tag">CREATE WITH US</span>
+      </div>
+
+      <!-- Headline -->
+      <h1 class="form-hero-title text-white mb-3">A Place For People Who Want To Contribute, Seriously</h1>
+
+      <!-- Supporting Copy -->
+      <p class="lead text-muted-custom mx-auto mb-0" style="max-width: 780px; font-size: 17.5px; line-height: 1.65;">
+        Whether you bring experience, personal capability or a complete business opportunity, start by telling us how
+        you want to be part of the Home Pakistan ecosystem.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       3. Main Section: Application Form (White Card) + Contact Information
+       ========================================================================== -->
+  <section class="form-main-section py-5" id="applicationSection">
+    <div class="container py-lg-4">
+      <div class="row g-5 align-items-start">
+
+        <!-- LEFT COLUMN: Three Clear Ways to Apply (White Card) -->
+        <!-- LEFT COLUMN: Three Clear Ways to Apply (White Card) -->
+        <div class="col-12 col-lg-7">
+          <div class="app-form-card p-4 p-md-5">
+
+            <div class="mb-4">
+              <h2 class="h3 fw-bold mb-2">Send an Application</h2>
+              <p class="text-muted small mb-0">Select the path that matches your profile and venture aspirations.</p>
+            </div>
+
+            <!-- Important Form Note -->
+            <div class="form-notice-box mb-4">
+              <div class="d-flex align-items-start gap-2">
+                <i class="bi bi-info-circle-fill text-primary mt-1"
+                  style="color: var(--purple-primary) !important;"></i>
+                <div>
+                  <strong>Important Note:</strong> Submitting a form begins a review process. It does not guarantee a
+                  role, investment, equity, partnership, mentoring or acceptance.
+                </div>
+              </div>
+            </div>
+
+            <!-- 3 Application Path Tabs -->
+            <div class="d-flex flex-wrap gap-2 mb-4" role="tablist" aria-label="Application Types">
+              <button type="button" class="app-tab-btn active" data-tab="mentor" id="tabMentor"
+                onclick="selectTab('mentor')">
+                <i class="bi bi-award me-1"></i> Apply as Mentor
+              </button>
+              <button type="button" class="app-tab-btn" data-tab="cofounder" id="tabCofounder"
+                onclick="selectTab('cofounder')">
+                <i class="bi bi-person-gear me-1"></i> Apply as Co-Founder
+              </button>
+              <button type="button" class="app-tab-btn" data-tab="business" id="tabBusiness"
+                onclick="selectTab('business')">
+                <i class="bi bi-lightbulb me-1"></i> Submit A Business Idea
+              </button>
+            </div>
+
+            <!-- Universal Submission Success Banner (Hidden by default) -->
+            <div class="submission-success-card d-none mb-4" id="universalSuccessMessage">
+              <div class="d-flex align-items-center gap-2 mb-1">
+                <i class="bi bi-check-circle-fill fs-5"></i>
+                <h4 class="h5 fw-bold mb-0 text-success">Application Received</h4>
+              </div>
+              <p class="mb-0 small" style="line-height: 1.6;">
+                Thank you. We have received your submission. Our team will review the information you provided and
+                contact you if there is a relevant next step.
+              </p>
+            </div>
+
+            <!-- ----------------------------------------------------------------
+              FORM 1: MENTOR APPLICATION
+            ---------------------------------------------------------------- -->
+            <form id="mentorForm" class="application-form" onsubmit="handleFormSubmit(event)">
+              <div class="p-3 mb-4 rounded-3" style="background: #f8fafc; border: 1px solid #e2e8f0;">
+                <p class="small text-secondary mb-0 fw-medium">
+                  <i class="bi bi-chat-quote-fill me-1" style="color: var(--purple-primary);"></i>
+                  Share the expertise you can bring to entrepreneurs and growing businesses.
+                </p>
+              </div>
+
+              <div class="row g-3">
+                <div class="col-12 col-md-6">
+                  <label class="form-label-custom">Full name <span class="text-danger">*</span></label>
+                  <input type="text" name="full_name" class="form-control form-control-custom w-100"
+                    placeholder="e.g. Tariq Khan" required>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <label class="form-label-custom">Email address <span class="text-danger">*</span></label>
+                  <input type="email" name="email" class="form-control form-control-custom w-100"
+                    placeholder="tariq@example.com" required>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <label class="form-label-custom">Phone number <span class="text-danger">*</span></label>
+                  <input type="tel" name="phone" class="form-control form-control-custom w-100"
+                    placeholder="+92 300 1234567" required>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <label class="form-label-custom">City <span class="text-danger">*</span></label>
+                  <input type="text" name="city" class="form-control form-control-custom w-100"
+                    placeholder="e.g. Lahore, Karachi" required>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <label class="form-label-custom">Current role <span class="text-danger">*</span></label>
+                  <input type="text" name="current_role" class="form-control form-control-custom w-100"
+                    placeholder="e.g. VP Engineering, Managing Director" required>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <label class="form-label-custom">Current organisation <span class="text-danger">*</span></label>
+                  <input type="text" name="current_organization" class="form-control form-control-custom w-100"
+                    placeholder="e.g. TechCorp, Self-employed" required>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <label class="form-label-custom">Years of professional experience <span
+                      class="text-danger">*</span></label>
+                  <input type="number" min="0" name="experience" class="form-control form-control-custom w-100"
+                    placeholder="e.g. 12" required>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <label class="form-label-custom">LinkedIn profile <span class="text-danger">*</span></label>
+                  <input type="url" name="linkedin_profile" class="form-control form-control-custom w-100"
+                    placeholder="https://linkedin.com/in/..." required>
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label-custom">Areas of expertise <span class="text-danger">*</span></label>
+                  <input type="text" name="expertise" class="form-control form-control-custom w-100"
+                    placeholder="e.g. Fintech, Product Strategy, Capital Allocation, GTM" required>
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label-custom">Industries you know well</label>
+                  <input type="text" name="industries" class="form-control form-control-custom w-100"
+                    placeholder="e.g. Agritech, E-Commerce, Logistics, Healthcare">
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label-custom">What practical support can you offer? <span
+                      class="text-danger">*</span></label>
+                  <textarea rows="3" name="practical_support" class="form-control form-control-custom w-100"
+                    placeholder="Describe mentoring, governance, advisory, or network introductions you can provide."
+                    required></textarea>
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label-custom">Estimated availability</label>
+                  <input type="text" name="availability" class="form-control form-control-custom w-100"
+                    placeholder="e.g. 2-4 hours per month">
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label-custom">Why do you want to join as a Mentor? <span
+                      class="text-danger">*</span></label>
+                  <textarea rows="3" name="motivation" class="form-control form-control-custom w-100"
+                    placeholder="Share your motivation to guide Pakistan's rising founders." required></textarea>
+                </div>
+
+                <!-- Checkboxes -->
+                <div class="col-12 mt-3">
+                  <div class="form-check mb-2">
+                    <input class="form-check-input" type="checkbox" id="mentorCheckAccuracy" required>
+                    <label class="form-check-label small text-secondary" for="mentorCheckAccuracy">
+                      I confirm that the information provided is accurate <span class="text-danger">*</span>
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="mentorCheckPrivacy" required>
+                    <label class="form-check-label small text-secondary" for="mentorCheckPrivacy">
+                      I have read the Privacy Policy <span class="text-danger">*</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </form>
+
+            <!-- ----------------------------------------------------------------
+            FORM 2: CO-FOUNDER APPLICATION
+            ---------------------------------------------------------------- -->
+            <form id="cofounderForm" class="application-form d-none" style="display: none;"
+              onsubmit="handleFormSubmit(event)">
+              <div class="p-3 mb-4 rounded-3" style="background: #f8fafc; border: 1px solid #e2e8f0;">
+                <p class="small text-secondary mb-0 fw-medium">
+                  <i class="bi bi-chat-quote-fill me-1" style="color: var(--purple-primary);"></i>
+                  Apply if you want to bring your skills, passion and commitment to help build a company with the Home
+                  Pakistan
+                  ecosystem.
+                </p>
+              </div>
+
+              <div class="row g-3">
+                <div class="col-12 col-md-6">
+                  <label class="form-label-custom">Full name <span class="text-danger">*</span></label>
+                  <input type="text" name="full_name" class="form-control form-control-custom w-100"
+                    placeholder="e.g. Sarah Ahmed" required>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <label class="form-label-custom">Email address <span class="text-danger">*</span></label>
+                  <input type="email" name="email" class="form-control form-control-custom w-100"
+                    placeholder="sarah@example.com" required>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <label class="form-label-custom">Phone number <span class="text-danger">*</span></label>
+                  <input type="tel" name="phone" class="form-control form-control-custom w-100"
+                    placeholder="+92 300 9876543" required>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <label class="form-label-custom">City <span class="text-danger">*</span></label>
+                  <input type="text" name="city" class="form-control form-control-custom w-100"
+                    placeholder="e.g. Islamabad, Karachi" required>
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label-custom">LinkedIn profile</label>
+                  <input type="url" name="linkedin_profile" class="form-control form-control-custom w-100"
+                    placeholder="https://linkedin.com/in/...">
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <label class="form-label-custom">Primary skills <span class="text-danger">*</span></label>
+                  <input type="text" name="primary_skills" class="form-control form-control-custom w-100"
+                    placeholder="e.g. Full-Stack Dev, Growth & Sales, AI/ML" required>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <label class="form-label-custom">Industries of interest <span class="text-danger">*</span></label>
+                  <input type="text" name="industries_of_interest" class="form-control form-control-custom w-100"
+                    placeholder="e.g. B2B SaaS, Quick Commerce, Clean Energy" required>
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label-custom">Relevant work experience <span class="text-danger">*</span></label>
+                  <textarea rows="3" name="experience" class="form-control form-control-custom w-100"
+                    placeholder="Key projects, previous startup builds, or leadership roles." required></textarea>
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label-custom">What type of work do you want to contribute? <span
+                      class="text-danger">*</span></label>
+                  <textarea rows="2" name="contribution" class="form-control form-control-custom w-100"
+                    placeholder="e.g. Technical leadership, Product management, Operations" required></textarea>
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label-custom">What motivates you to build? <span
+                      class="text-danger">*</span></label>
+                  <textarea rows="2" name="motivation" class="form-control form-control-custom w-100"
+                    placeholder="Why do you want to build a venture with Home Pakistan now?" required></textarea>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <label class="form-label-custom">Availability <span class="text-danger">*</span></label>
+                  <input type="text" name="availability" class="form-control form-control-custom w-100"
+                    placeholder="e.g. Full-time, 30 days notice" required>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <label class="form-label-custom">Portfolio or work links (optional)</label>
+                  <input type="url" name="portfolio" class="form-control form-control-custom w-100"
+                    placeholder="https://github.com/... or portfolio">
+                </div>
+
+                <!-- Checkboxes -->
+                <div class="col-12 mt-3">
+                  <div class="form-check mb-2">
+                    <input class="form-check-input" type="checkbox" id="cofounderCheckAccuracy" required>
+                    <label class="form-check-label small text-secondary" for="cofounderCheckAccuracy">
+                      I confirm that the information provided is accurate <span class="text-danger">*</span>
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="cofounderCheckPrivacy" required>
+                    <label class="form-check-label small text-secondary" for="cofounderCheckPrivacy">
+                      I have read the Privacy Policy <span class="text-danger">*</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </form>
+
+            <!-- ----------------------------------------------------------------
+                 FORM 3: SUBMIT BUSINESS IDEA
+                 ---------------------------------------------------------------- -->
+            <form id="businessForm" class="application-form d-none" style="display: none;"
+              onsubmit="handleFormSubmit(event)">
+              <div class="p-3 mb-4 rounded-3" style="background: #f8fafc; border: 1px solid #e2e8f0;">
+                <p class="small text-secondary mb-0 fw-medium">
+                  <i class="bi bi-chat-quote-fill me-1" style="color: var(--purple-primary);"></i>
+                  Apply here if you are bringing a complete business idea, early venture or feasibility for Home
+                  Pakistan to
+                  review.
+                </p>
+              </div>
+
+              <div class="row g-3">
+                <div class="col-12 col-md-6">
+                  <label class="form-label-custom">Full name <span class="text-danger">*</span></label>
+                  <input type="text" name="full_name" class="form-control form-control-custom w-100"
+                    placeholder="e.g. Bilal Rehman" required>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <label class="form-label-custom">Email address <span class="text-danger">*</span></label>
+                  <input type="email" name="email" class="form-control form-control-custom w-100"
+                    placeholder="bilal@venture.pk" required>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <label class="form-label-custom">Phone number <span class="text-danger">*</span></label>
+                  <input type="tel" name="phone" class="form-control form-control-custom w-100"
+                    placeholder="+92 321 4567890" required>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <label class="form-label-custom">City <span class="text-danger">*</span></label>
+                  <input type="text" name="city" class="form-control form-control-custom w-100"
+                    placeholder="e.g. Lahore, Peshawar" required>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <label class="form-label-custom">Venture or business name (optional)</label>
+                  <input type="text" name="business_name" class="form-control form-control-custom w-100"
+                    placeholder="e.g. AgriPak Dynamics">
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <label class="form-label-custom">Industry <span class="text-danger">*</span></label>
+                  <input type="text" name="industry" class="form-control form-control-custom w-100"
+                    placeholder="e.g. Agritech, Supply Chain, FinTech" required>
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label-custom">Business stage <span class="text-danger">*</span></label>
+                  <select name="business_stage" class="form-select form-control-custom w-100" required>
+                    <option value="" disabled selected>Select business stage</option>
+                    <option value="concept">Idea / Concept Stage</option>
+                    <option value="prototype">Prototype / Working MVP</option>
+                    <option value="traction">Early Traction / Initial Revenue</option>
+                    <option value="scaling">Growth & Scaling</option>
+                  </select>
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label-custom">Describe the business idea in one sentence <span
+                      class="text-danger">*</span></label>
+                  <input type="text" name="idea_one_liner" class="form-control form-control-custom w-100"
+                    placeholder="Clear, sharp one-liner overview" required>
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label-custom">What problem are you solving? <span
+                      class="text-danger">*</span></label>
+                  <textarea rows="2" name="problem_statement" class="form-control form-control-custom w-100"
+                    placeholder="Explain the exact pain point in Pakistan's market." required></textarea>
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label-custom">Who is the customer? <span class="text-danger">*</span></label>
+                  <input type="text" name="target_customer" class="form-control form-control-custom w-100"
+                    placeholder="e.g. Smallholder farmers in Punjab, Tier-2 retail merchants" required>
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label-custom">What makes the idea feasible? <span
+                      class="text-danger">*</span></label>
+                  <textarea rows="2" name="feasibility" class="form-control form-control-custom w-100"
+                    placeholder="Why now? What unit economics or unfair advantage exists?" required></textarea>
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label-custom">What have you achieved so far?</label>
+                  <textarea rows="2" name="achievements" class="form-control form-control-custom w-100"
+                    placeholder="Pilots, user interviews, waitlist, prototype results"></textarea>
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label-custom">Team details</label>
+                  <textarea rows="2" name="team_details" class="form-control form-control-custom w-100"
+                    placeholder="Co-founders, key operators, backgrounds"></textarea>
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label-custom">What support are you looking for? <span
+                      class="text-danger">*</span></label>
+                  <textarea rows="2" name="support_needed" class="form-control form-control-custom w-100"
+                    placeholder="e.g. Seed investment, co-founding operator, venture incubation" required></textarea>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <label class="form-label-custom">Pitch deck or feasibility document (PDF, optional)</label>
+                  <input type="file" name="pitch_deck" class="form-control form-control-custom w-100" accept=".pdf">
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <label class="form-label-custom">Website or product link (optional)</label>
+                  <input type="url" name="website_link" class="form-control form-control-custom w-100"
+                    placeholder="https://...">
+                </div>
+
+                <!-- Checkboxes -->
+                <div class="col-12 mt-3">
+                  <div class="form-check mb-2">
+                    <input class="form-check-input" type="checkbox" id="businessCheckAccuracy" required>
+                    <label class="form-check-label small text-secondary" for="businessCheckAccuracy">
+                      I confirm that the information provided is accurate <span class="text-danger">*</span>
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="businessCheckPrivacy" required>
+                    <label class="form-check-label small text-secondary" for="businessCheckPrivacy">
+                      I have read the Privacy Policy <span class="text-danger">*</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </form>
+
+            <!-- Single Universal Submit Button -->
+            <div class="col-12 mt-4">
+              <button type="button" class="btn btn-send-application w-100" onclick="submitActiveForm()">
+                Send Application
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN: Contact Information (Figma Screenshot Layout) -->
+        <div class="col-12 col-lg-5 ps-lg-4">
+          <div class="mb-4">
+            <h2 class="contact-info-title mb-2">Contact Information</h2>
+            <p class="contact-info-desc">
+              Reach out to us directly for urgent booking enquiries, media press kits, or executive interviews.
+            </p>
+          </div>
+
+          <!-- Contact Cards -->
+          <div class="d-flex flex-column gap-3 mb-5">
+            <!-- Email -->
+            <div class="contact-info-item">
+              <div class="contact-icon-box">
+                <i class="bi bi-envelope-fill"></i>
+              </div>
+              <div>
+                <div class="contact-item-label">EMAIL US</div>
+                <a href="mailto:hello@homepakistan.studio" class="contact-item-value">hello@homepakistan.studio</a>
+              </div>
+            </div>
+
+            <!-- Phone -->
+            <div class="contact-info-item">
+              <div class="contact-icon-box">
+                <i class="bi bi-telephone-fill"></i>
+              </div>
+              <div>
+                <div class="contact-item-label">CALL US</div>
+                <a href="tel:+9242111222333" class="contact-item-value">+92 42 111 222 333</a>
+              </div>
+            </div>
+
+            <!-- Address -->
+            <div class="contact-info-item">
+              <div class="contact-icon-box">
+                <i class="bi bi-geo-alt-fill"></i>
+              </div>
+              <div>
+                <div class="contact-item-label">STUDIO ADDRESS</div>
+                <div class="contact-item-value">Phase 5, DHA, Lahore, Pakistan</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Follow the Story Social Links -->
+          <div>
+            <div class="text-uppercase fw-bold letter-spacing-2 text-muted-custom mb-3" style="font-size: 11px;">
+              FOLLOW THE STORY
+            </div>
+            <div class="d-flex flex-wrap gap-2">
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer"
+                class="social-pill-btn">YouTube</a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+                class="social-pill-btn">Instagram</a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+                class="social-pill-btn">LinkedIn</a>
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"
+                class="social-pill-btn">Facebook</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       4. Physical Epicenter in Lahore (Screenshot 2)
+       ========================================================================== -->
+  <section class="epicenter-section py-5" id="epicenterSection">
+    <div class="container py-lg-5">
+      <!-- Section Tag -->
+      <div class="d-flex align-items-center gap-2 mb-3">
+        <span class="eyebrow-dot"></span>
+        <span class="text-uppercase fw-bold eyebrow-tag">VISIT THE STUDIO</span>
+      </div>
+
+      <h2 class="h1 fw-bold text-white mb-5">Our Physical Epicenter in Lahore</h2>
+
+      <div class="row g-4 g-lg-5 align-items-center">
+        <!-- Building Image Frame (src empty as instructed so user can add custom photo) -->
+        <div class="col-12 col-lg-6">
+          <div class="studio-building-frame" style="height: 380px;">
+            <img src="./images/formSection.png" alt="Phase 5 DHA Lahore Luxury Studio Structure"
+              class="w-100 h-100 object-fit-cover"
+              onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #0e1122 0%, #1a1e38 100%)'; this.parentElement.innerHTML='<div class=\'d-flex flex-column align-items-center justify-content-center h-100 text-muted p-4 text-center\'><i class=\'bi bi-building fs-1 mb-2 text-purple-accent\'></i><span>Physical Studio Building Image</span></div>';">
+          </div>
+        </div>
+
+        <!-- Studio Description Copy -->
+        <div class="col-12 col-lg-6">
+          <h3 class="h3 fw-bold text-white mb-3">Phase 5, DHA, Lahore</h3>
+          <p class="text-muted-custom mb-4" style="font-size: 15.5px; line-height: 1.7;">
+            Our luxury studio structure houses state-of-the-art acoustic media recording environments, dedicated
+            post-production workstations, and our central venture strategy chambers.
+          </p>
+          <p class="text-muted-custom mb-0" style="font-size: 15.5px; line-height: 1.7;">
+            Conveniently located in DHA Phase 5, with secure, dedicated private parking and strict visitor entry
+            protocols to protect our guests' professional privacy.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       5. Frequently Asked Questions Section (Screenshot 3 - White Section)
+       ========================================================================== -->
+  <section class="faq-section py-5" id="faqSection">
+    <div class="container py-lg-5">
+      <div class="text-center mb-5">
+        <div class="d-inline-flex align-items-center gap-2 mb-2">
+          <span class="eyebrow-dot"></span>
+          <span class="text-uppercase fw-bold eyebrow-tag">COMMON QUESTIONS</span>
+        </div>
+        <h2 class="h1 fw-bold mb-0">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-10">
+          <div class="accordion faq-accordion" id="faqAccordion">
+
+            <!-- Question 1 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faqHead1">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1"
+                  aria-expanded="true" aria-controls="faqCollapse1">
+                  How can I be a guest on the podcast?
+                </button>
+              </h2>
+              <div id="faqCollapse1" class="accordion-collapse collapse show" aria-labelledby="faqHead1"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  We actively evaluate high-impact innovators, creators, and corporate executors based in or
+                  contributing to Pakistan. Simply submit the Guest Application on our contact form with a brief summary
+                  of your journey.
+                </div>
+              </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faqHead2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
+                  What does a studio session include?
+                </button>
+              </h2>
+              <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faqHead2"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Every booking includes complete high-fidelity audio capture, 4K multi-angle videography, custom
+                  ambient stage lighting configuration, and optional access to our professional editorial clip
+                  production team.
+                </div>
+              </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faqHead3">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
+                  Do you offer partnership opportunities?
+                </button>
+              </h2>
+              <div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faqHead3"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Yes, we collaborate closely with progressive national and global brands. We structure bespoke
+                  high-production brand integrations, series sponsor spots, and direct product incubation paths.
+                </div>
+              </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faqHead4">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4">
+                  How do I book the studio for my project?
+                </button>
+              </h2>
+              <div id="faqCollapse4" class="accordion-collapse collapse" aria-labelledby="faqHead4"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Select 'Studio Booking' in the contact form dropdown menu. Our operations manager will reach out with
+                  pricing schedules, tech specs sheets, and open calendar blocks.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       6. Ready to Create Something? CTA (Screenshot 4)
+       ========================================================================== -->
+  <section class="create-cta-section py-5 position-relative text-center" id="createCta">
+    <!-- Background wave texture from Figma screenshot 4 -->
+    <img src="images/cta-bg.png" alt="Wave Backdrop" class="create-cta-backdrop" onerror="this.style.display='none';">
+    <div class="create-cta-overlay"></div>
+
+    <div class="container position-relative py-5" style="z-index: 2;">
+      <h2 class="h1 fw-bold text-white mb-3">Ready to Create Something?</h2>
+      <p class="text-muted-custom mx-auto mb-4" style="max-width: 620px; font-size: 16px; line-height: 1.65;">
+        Launch your enterprise's premium conversation with our design and production tools. Elevate your narrative.
+      </p>
+      <div class="d-flex flex-wrap justify-content-center gap-3">
+        <a href="#applicationSection" class="btn btn-solid-purple">BOOK THE STUDIO</a>
+        <a href="#applicationSection" class="btn btn-ghost-white">BE A GUEST</a>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <!-- Bootstrap 5.3 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+  <script src="./components.js"></script>
+
+  <!-- Interactive Form Switcher & Submission Handler -->
+  <script>
+    
+
+    function selectTab(tabKey) {
+      const tabs = {
+        mentor: { btn: document.getElementById('tabMentor'), form: document.getElementById('mentorForm') },
+        cofounder: { btn: document.getElementById('tabCofounder'), form: document.getElementById('cofounderForm') },
+        business: { btn: document.getElementById('tabBusiness'), form: document.getElementById('businessForm') }
+      };
+
+      Object.keys(tabs).forEach(function (key) {
+        const item = tabs[key];
+        if (key === tabKey) {
+          if (item.btn) item.btn.classList.add('active');
+          if (item.form) {
+            item.form.classList.remove('d-none');
+            item.form.style.display = 'block';
+          }
+        } else {
+          if (item.btn) item.btn.classList.remove('active');
+          if (item.form) {
+            item.form.classList.add('d-none');
+            item.form.style.display = 'none';
+          }
+        }
+      });
+
+      const msg = document.getElementById('universalSuccessMessage');
+      if (msg) msg.classList.add('d-none');
+    }
+
+    // Auto-select tab from URL parameter or hash
+    document.addEventListener('DOMContentLoaded', function () {
+      var urlParams = new URLSearchParams(window.location.search);
+      var tabParam = urlParams.get('tab') || urlParams.get('type');
+      var hash = window.location.hash.toLowerCase();
+
+      var targetTab = null;
+      if (tabParam) {
+        targetTab = tabParam.toLowerCase();
+      } else if (hash.includes('cofounder') || hash.includes('co-founder')) {
+        targetTab = 'cofounder';
+      } else if (hash.includes('business')) {
+        targetTab = 'business';
+      } else if (hash.includes('mentor')) {
+        targetTab = 'mentor';
+      }
+
+      if (targetTab && ['mentor', 'cofounder', 'business'].indexOf(targetTab) !== -1) {
+        selectTab(targetTab);
+        setTimeout(function () {
+          var section = document.getElementById('applicationSection');
+          if (section) {
+            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }, 150);
+      }
+    });
+
+
+    function submitActiveForm() {
+      // Currently visible form find karein (jo d-none na ho)
+      const activeForm = document.querySelector('.application-form:not(.d-none)');
+
+      if (activeForm) {
+        // Agar form valid hai to submit karein, varna browser validation trigger karein
+        if (activeForm.checkValidity()) {
+          // Direct submit event trigger karein
+          activeForm.requestSubmit();
+        } else {
+          // Validation error tooltips/styles trigger karein
+          activeForm.reportValidity();
+        }
+      }
+    }
+
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const successBox = document.getElementById('universalSuccessMessage');
+      if (successBox) {
+        successBox.classList.remove('d-none');
+        successBanner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+      e.target.reset();
+    }
+  </script>
+</body>
+
+</html>

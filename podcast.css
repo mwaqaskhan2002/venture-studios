@@ -1,0 +1,1455 @@
+/* ==========================================================================
+   Home Pakistan Venture Studio - Podcast Page Stylesheet
+   Minimal Custom CSS: Design Tokens, Fonts, Brand Colors & Effects
+   (Layout, Grid, Spacing & Components powered by Bootstrap 5.3)
+   ========================================================================== */
+
+:root {
+  /* Brand Colors */
+  --bg-darkest: #060813;
+  --bg-dark: #090d20;
+  --bg-card: #0e1122;
+  --bg-card-hover: #141830;
+  --border-subtle: #1e293b;
+  --border-light: rgba(255, 255, 255, 0.08);
+
+  /* Brand Accents */
+  --purple-primary: #5c4ecc;
+  --purple-hover: #4e3fb8;
+  --purple-accent: #8f85ff;
+  --purple-soft: #c0c1ff;
+
+  /* High Contrast Typography Tokens */
+  --text-white: #ffffff;
+  --text-cream: #cbd5e1;
+  --text-muted-custom: #94a3b8;
+
+  /* Fonts */
+  --font-sora: 'Sora', sans-serif;
+  --font-inter: 'Inter', sans-serif;
+}
+
+/* Base Body Styles */
+body {
+  background-color: var(--bg-darkest);
+  font-family: var(--font-inter);
+  color: var(--text-cream);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Shared page gutter — matches the Home page section alignment */
+.site-container {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+/* Heading Fonts */
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: var(--font-sora);
+  color: var(--text-white);
+}
+
+  /* High-Contrast Text Classes */
+  .text-purple-accent {
+    color: var(--purple-accent) !important;
+  }
+
+  .text-purple-soft {
+    color: var(--purple-soft) !important;
+  }
+
+  .text-muted-custom {
+    color: var(--text-muted-custom) !important;
+  }
+
+  .text-cream {
+    color: var(--text-cream) !important;
+  }
+
+  .letter-spacing-1 {
+    letter-spacing: 1px;
+  }
+
+  .letter-spacing-2 {
+    letter-spacing: 2px;
+  }
+/* =========================
+   PODCAST HERO
+========================= */
+
+.podcast-hero-section {
+    position: relative;
+
+    min-height: 620px;
+
+    background: #060813;
+
+    color: #ffffff;
+}
+
+
+/* BACKGROUND IMAGE */
+
+.podcast-hero-bg {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    /* IMPORTANT */
+    object-position: center top;
+
+    z-index: 0;
+}
+
+
+/* =========================
+   DARK OVERLAY
+========================= */
+
+.podcast-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(6, 8, 19, 0.8);
+}
+
+.hero-label {
+    font-size: 12px;
+}
+
+
+/* =========================
+   HERO CONTAINER
+========================= */
+
+.podcast-hero-container {
+    position: relative;
+
+    z-index: 2;
+
+    min-height: 620px;
+
+    padding-top: 180px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 70px;
+}
+
+
+/* =========================
+   EYEBROW
+========================= */
+
+.podcast-hero-eyebrow {
+    margin-bottom: 25px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 1.4px;
+
+    color: #a6adc0;
+
+    text-transform: uppercase;
+}
+
+
+.podcast-hero-dot {
+    width: 5px;
+    height: 5px;
+
+    display: block;
+
+    background: #8f85ff;
+
+    border-radius: 50%;
+}
+
+
+/* =========================
+   CENTER CONTENT
+========================= */
+
+.podcast-hero-content {
+    max-width: 1050px;
+}
+
+
+/* =========================
+   HEADING
+========================= */
+
+.podcast-hero-heading {
+    max-width: 900px;
+
+    /* margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 22px; */
+
+    /* font-family: "Sora", sans-serif; */
+
+    font-size: clamp(1.875rem, 1.4286rem + 2.2321vw, 3.4375rem);
+    /* font-weight: 700; */
+
+    line-height: 1.13;
+
+    letter-spacing: -1.2px;
+
+    color: #ffffff;
+}
+
+
+/* =========================
+   COPY
+========================= */
+
+.podcast-hero-copy {
+    max-width: 850px;
+
+    margin-bottom: 25px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 15px;
+    font-weight: 400;
+
+    line-height: 1.6;
+
+    color: #9da8bd;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.podcast-hero-btn {
+    min-height: 44px;
+
+    padding-left: 20px;
+    padding-right: 20px;
+
+    background: #5c4ecc;
+
+    border: 1px solid #5c4ecc;
+
+    border-radius: 6px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    transition: 0.2s ease;
+}
+
+
+.podcast-hero-btn:hover {
+    background: #6b5ddd;
+
+    border-color: #6b5ddd;
+
+    color: #ffffff;
+}
+
+
+/* =========================
+   LAPTOP
+========================= */
+
+@media (max-width: 1199.98px) {
+
+    .podcast-hero-section,
+    .podcast-hero-container {
+        min-height: 480px;
+    }
+
+
+    .podcast-hero-container {
+        padding-top: 145px;
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+
+
+    .podcast-hero-heading {
+        max-width: 800px;
+
+        font-size: 46px;
+    }
+
+
+    .podcast-hero-copy {
+        max-width: 760px;
+
+        font-size: 14px;
+    }
+
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 991.98px) {
+
+    .podcast-hero-section,
+    .podcast-hero-container {
+        min-height: 450px;
+    }
+
+
+    .podcast-hero-container {
+        padding-top: 135px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 60px;
+    }
+
+
+    .podcast-hero-heading {
+        max-width: 700px;
+
+        font-size: 39px;
+    }
+
+
+    .podcast-hero-copy {
+        max-width: 680px;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 575.98px) {
+
+    .podcast-hero-section,
+    .podcast-hero-container {
+        min-height: 440px;
+    }
+
+
+    .podcast-hero-container {
+        padding-top: 120px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 55px;
+    }
+
+
+    .podcast-hero-eyebrow {
+        margin-bottom: 20px;
+
+        font-size: 8px;
+
+        letter-spacing: 1.2px;
+    }
+
+
+    .podcast-hero-heading {
+        font-size: 30px;
+
+        line-height: 1.2;
+
+        letter-spacing: -0.5px;
+    }
+
+
+    .podcast-hero-copy {
+        font-size: 13px;
+
+        line-height: 1.6;
+    }
+
+
+    .podcast-hero-btn {
+        width: 100%;
+
+        justify-content: center;
+
+        min-height: 46px;
+    }
+
+}
+/* =========================
+   WHAT THE PODCAST IS BUILDING
+========================= */
+
+.podcast-building-section {
+    background: #050814;
+
+    color: #ffffff;
+}
+
+
+/* =========================
+   LABEL
+========================= */
+
+.podcast-building-dot {
+    width: 5px;
+    height: 5px;
+
+    display: block;
+
+    background: #8f85ff;
+
+    border-radius: 50%;
+}
+
+
+.podcast-building-label {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    color: rgba(148, 163, 184, 1);
+    text-transform: uppercase;
+}
+
+
+/* =========================
+   VIDEO
+========================= */
+
+.podcast-building-video {
+    overflow: hidden;
+
+    background: #0e1122;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+}
+
+
+.podcast-building-image {
+    aspect-ratio: 16 / 10;
+
+    object-fit: cover;
+}
+
+
+.podcast-building-play {
+    width: 58px;
+    height: 58px;
+
+    display: block;
+
+    transition: transform 0.2s ease;
+}
+
+
+.podcast-building-video:hover .podcast-building-play {
+    transform: scale(1.08);
+}
+
+
+/* =========================
+   HEADING
+========================= */
+
+.podcast-building-heading {
+    font-family: "Sora", sans-serif;
+
+    font-size: 35px;
+    font-weight: 700;
+
+    line-height: 1.22;
+
+    color: #ffffff;
+}
+
+
+/* =========================
+   PROFILE
+========================= */
+
+.podcast-building-avatar {
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 1px solid #8f85ff;
+
+    background: #12172a;
+}
+
+
+.podcast-building-name {
+    font-family: "Sora", sans-serif;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    color: #ffffff;
+}
+
+
+.podcast-building-role {
+    font-family: "Inter", sans-serif;
+
+    font-size: 12px;
+    font-weight: 400;
+
+    color: #8f9ab5;
+}
+
+
+/* =========================
+   COPY
+========================= */
+
+.podcast-building-copy {
+    font-family: "Inter", sans-serif;
+
+    font-size: 14px;
+    font-weight: 400;
+
+    line-height: 1.7;
+
+    color: #96a2bc;
+}
+
+
+/* =========================
+   WATCH BUTTON
+========================= */
+
+.podcast-building-watch-btn {
+    min-height: 44px;
+
+    padding-left: 22px;
+    padding-right: 22px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #5c4ecc;
+
+    border: 1px solid #5c4ecc;
+
+    border-radius: 6px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    color: #ffffff;
+}
+
+
+.podcast-building-watch-btn:hover {
+    background: #6b5ddd;
+
+    border-color: #6b5ddd;
+
+    color: #ffffff;
+}
+
+
+/* =========================
+   AIM CARDS
+========================= */
+
+.podcast-aim-card {
+    position: relative;
+    padding: 22px;
+    background: #0b1020;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+}
+
+
+.podcast-aim-number i{
+    font-size: 20px;
+    color: #8f85ff;
+}
+
+
+.podcast-aim-card h3 {
+    margin-bottom: 8px;
+    font-family: "Sora", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+
+.podcast-aim-card p {
+    margin: 0;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 12px;
+    font-weight: 400;
+
+    line-height: 1.6;
+
+    color: #8995ae;
+}
+
+
+/* =========================
+   LAPTOP
+========================= */
+
+@media (max-width: 1199.98px) {
+
+    .site-container {
+        padding-left: 48px;
+        padding-right: 48px;
+    }
+
+    .podcast-building-heading {
+        font-size: 31px;
+    }
+
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 991.98px) {
+
+    .site-container {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .podcast-building-heading {
+        font-size: 29px;
+    }
+
+
+    .podcast-building-image {
+        aspect-ratio: 16 / 9;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 575.98px) {
+
+    .site-container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .podcast-building-section {
+        padding-top: 45px !important;
+        padding-bottom: 45px !important;
+    }
+
+
+    .podcast-building-label {
+        font-size: 9px;
+
+        letter-spacing: 1.2px;
+    }
+
+
+    .podcast-building-video {
+        border-radius: 9px;
+    }
+
+
+    .podcast-building-image {
+        aspect-ratio: 16 / 10;
+    }
+
+
+    .podcast-building-play {
+        width: 46px;
+        height: 46px;
+    }
+
+
+    .podcast-building-heading {
+        font-size: 25px;
+
+        line-height: 1.25;
+    }
+
+
+    .podcast-building-avatar {
+        width: 42px;
+        height: 42px;
+    }
+
+
+    .podcast-building-name {
+        font-size: 13px;
+    }
+
+
+    .podcast-building-role {
+        font-size: 11px;
+    }
+
+
+    .podcast-building-copy {
+        font-size: 13px;
+    }
+
+
+    .podcast-building-watch-btn {
+        width: 100%;
+    }
+
+
+    .podcast-aims {
+        margin-top: 35px !important;
+    }
+
+
+    .podcast-aim-card {
+        padding: 18px;
+    }
+
+}
+
+/* =========================
+   PODCAST MODAL
+========================= */
+
+.podcast-modal-dialog {
+    max-width: 900px;
+}
+
+
+.podcast-modal-content {
+    background: #090d1a;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 12px;
+
+    overflow: hidden;
+}
+
+
+.podcast-modal-content .modal-header {
+    padding: 14px 16px 8px;
+}
+
+
+.podcast-modal-content .modal-body {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 16px;
+}
+
+
+.podcast-modal-content iframe {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    border: 0;
+
+    border-radius: 8px;
+}
+
+
+/* Bootstrap dark backdrop */
+
+.modal-backdrop.show {
+    opacity: 0.82;
+}
+
+
+/* =========================
+   EPISODES
+========================= */
+
+.episodes-section {
+    background: #171c2d;
+}
+
+
+.episodes-label {
+    font-family: "Inter", sans-serif;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    color: #8f85ff;
+
+    text-transform: uppercase;
+}
+
+
+.episodes-heading {
+    font-family: "Sora", sans-serif;
+
+    font-size: 36px;
+    font-weight: 700;
+
+    color: #ffffff;
+}
+
+
+.episode-card {
+    overflow: hidden;
+
+    background: #0d1123;
+
+    border: 1px solid rgba(255, 255, 255, 0.09);
+
+    border-radius: 12px;
+}
+
+
+.episode-card-thumb {
+    overflow: hidden;
+
+    cursor: pointer;
+
+    background: #111625;
+}
+
+
+.episode-card-thumb > img:first-child {
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    object-fit: cover;
+}
+
+
+.episode-play-icon {
+    width: 48px;
+    height: 48px;
+}
+
+
+.episode-industry {
+    width: fit-content;
+
+    padding: 4px 9px;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    border-radius: 5px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    color: #8f85ff;
+}
+
+
+.episode-card-title {
+    font-family: "Sora", sans-serif;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    line-height: 1.35;
+
+    color: #ffffff;
+}
+
+
+.episode-guest {
+    font-family: "Inter", sans-serif;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    color: #ffffff;
+}
+
+
+.episode-description {
+    font-family: "Inter", sans-serif;
+
+    font-size: 13px;
+    font-weight: 400;
+
+    line-height: 1.65;
+
+    color: #8f9ab5;
+}
+
+
+.episode-card-footer {
+    border-top:
+        1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Sirf main thumbnail image */
+.episode-card-thumb > img:first-child {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+
+.episode-youtube-link {
+    font-family: "Inter", sans-serif;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    color: #8f85ff;
+
+    text-decoration: none;
+}
+
+
+.episode-youtube-link:hover {
+    color: #ffffff;
+}
+
+
+@media (max-width: 991.98px) {
+
+    .episodes-heading {
+        font-size: 31px;
+    }
+
+}
+
+
+@media (max-width: 575.98px) {
+
+    .episodes-heading {
+        font-size: 26px;
+    }
+
+
+    .episode-card-title {
+        font-size: 16px;
+    }
+
+
+    .episode-play-icon {
+        width: 42px;
+        height: 42px;
+    }
+
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 991.98px) {
+
+    .podcast-modal-dialog {
+        max-width: 760px;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 575.98px) {
+
+    .podcast-modal-dialog {
+        width: calc(100% - 24px);
+
+        max-width: none;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    .podcast-modal-content .modal-header {
+        padding: 12px 12px 6px;
+    }
+
+
+    .podcast-modal-content .modal-body {
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-bottom: 12px;
+    }
+
+}
+
+/* Primary Button */
+.btn-solid-purple {
+  background-color: var(--purple-primary);
+  border: 1px solid var(--purple-primary);
+  color: #ffffff;
+  font-family: var(--font-sora);
+  font-weight: 600;
+  font-size: 13.5px;
+  letter-spacing: 0.4px;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(92, 78, 204, 0.35);
+  transition: all 0.2s ease;
+}
+
+.btn-solid-purple:hover {
+  background-color: var(--purple-hover);
+  border-color: var(--purple-hover);
+  color: #ffffff;
+  /* transform: translateY(-2px); */
+  /* box-shadow: 0 10px 24px rgba(92, 78, 204, 0.5); */
+}
+
+/* Ghost Button */
+.btn-ghost-white {
+  background-color: transparent;
+  border: 1.5px solid rgba(255, 255, 255, 0.6);
+  color: #ffffff;
+  font-family: var(--font-sora);
+  font-weight: 600;
+  font-size: 13.5px;
+  letter-spacing: 0.5px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.btn-ghost-white:hover {
+  border-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  /* transform: translateY(-2px); */
+}
+
+/* ==========================================================================
+   4. Category Filter Chips
+   ========================================================================== */
+.filter-chip {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  color: #ffffff;
+  font-family: var(--font-inter);
+  font-size: 13.5px;
+  font-weight: 500;
+  padding: 8px 18px;
+  border-radius: 100px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+.filter-chip:hover {
+  border-color: var(--purple-accent);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.filter-chip.active {
+  background-color: var(--purple-primary);
+  border-color: var(--purple-primary);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(92, 78, 204, 0.35);
+}
+/* =========================================
+   DISCOVERY BAR & INPUT STYLES
+========================================= --> */
+.custom-search-group {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.05);
+  transition: border-color 0.3s ease;
+}
+
+.custom-search-group:focus-within {
+  border-color: #5c4ecc;
+}
+
+.custom-search-group .form-control {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  padding: 10px 16px;
+  box-shadow: none;
+}
+
+.custom-search-group .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.btn-search-action {
+  background-color: #5c4ecc;
+  color: #ffffff;
+  border: none;
+  padding: 0 20px;
+  transition: background-color 0.2s ease;
+}
+
+.btn-search-action:hover {
+  background-color: #4b3eb3;
+  color: #ffffff;
+}
+
+/* Filter Trigger Button */
+.btn-filter-trigger {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btn-filter-trigger:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+}
+
+/* =========================================
+   FILTER MODAL STYLES
+========================================= --> */
+.custom-filter-modal {
+  background-color: #16161a;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  border-radius: 12px;
+}
+
+.text-purple {
+  color: #5c4ecc;
+}
+
+.btn-purple {
+  background-color: #5c4ecc;
+  color: #ffffff;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.btn-purple:hover {
+  background-color: #4b3eb3;
+  color: #ffffff;
+}
+
+.custom-modal-select {
+  background-color: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  border-radius: 6px;
+  padding: 10px 14px;
+}
+
+.custom-modal-select:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: #5c4ecc;
+  box-shadow: 0 0 0 0.2rem rgba(92, 78, 204, 0.25);
+  color: #ffffff;
+}
+
+.custom-modal-select option {
+  background-color: #16161a;
+  color: #ffffff;
+}
+/* ==========================================================================
+   5. Podcast Episode Cards
+   ========================================================================== */
+.episode-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.episode-card:hover {
+  /* transform: translateY(-5px); */
+  border-color: rgba(143, 133, 255, 0.3);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.7);
+}
+
+.episode-card-thumb {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background-color: #0b0f24;
+  cursor: pointer;
+}
+
+/* .episode-card:hover .episode-card-thumb img {
+  transform: scale(1.05);
+} */
+
+.card-play-btn {
+  width: 44px;
+  height: 44px;
+  background: rgba(14, 17, 34, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.episode-card:hover .card-play-btn {
+  background: var(--purple-primary);
+  border-color: var(--purple-accent);
+  transform: scale(1.12);
+  box-shadow: 0 0 20px rgba(92, 78, 204, 0.6);
+}
+
+.episode-card-title {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.35;
+  color: #ffffff;
+}
+
+.episode-col {
+  transition: all 0.35s ease;
+}
+
+/* View Episode Details Button Styling */
+.btn-episode-details {
+  background: transparent;
+  border: none;
+  padding: 0;
+  font-weight: 600;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.25s ease, opacity 0.25s ease;
+}
+
+/* Arrow Icon Animation */
+.btn-episode-details .icon-arrow {
+  font-size: 1.1rem;
+  transition: transform 0.25s ease;
+}
+
+/* Hover State Effects */
+.btn-episode-details:hover {
+  opacity: 0.85;
+  color: #ffffff; /* Jab hover ho to link clear rahe */
+}
+
+.btn-episode-details:hover .icon-arrow {
+  transform: translateX(4px); /* Hover par arrow thoda right move hoga */
+}
+
+/* Focus and Active States */
+.btn-episode-details:focus,
+.btn-episode-details:active {
+  outline: none;
+  box-shadow: none;
+}
+
+/* ==========================================================================
+   6. Newsletter CTA Section
+   ========================================================================== */
+.newsletter-cta-section {
+  position: relative;
+  background-color: var(--bg-dark);
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+  overflow: hidden;
+}
+
+.newsletter-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.newsletter-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(6, 8, 19, 0.75);
+  z-index: 1;
+}
+
+.newsletter-input {
+  background-color: #060813 !important;
+  border: 1px solid var(--border-subtle) !important;
+  color: #ffffff !important;
+  padding: 14px 18px !important;
+  font-size: 14px;
+}
+
+.newsletter-input::placeholder {
+    color: #ffffff !important;
+    opacity: 0.8 !important; /* Visual contrast */
+  }
+
+.newsletter-input:focus {
+  border-color: var(--purple-accent) !important;
+  box-shadow: 0 0 0 2px rgba(92, 78, 204, 0.25) !important;
+}
+
+/* ==========================================================================
+   7. Footer
+   ========================================================================== */
+.site-footer {
+  background-color: #03050c;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.footer-link {
+  color: var(--text-muted-custom) !important;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+  color: #ffffff !important;
+}
+
+
+/* =========================
+   PODCAST CARD IMAGE MOBILE FIX
+========================= */
+
+@media (max-width: 430px) {
+
+    .episode-card-thumb {
+        width: 100% !important;
+        height: auto !important;
+        aspect-ratio: auto !important;
+        overflow: hidden;
+    }
+
+    /* Sirf main YouTube thumbnail */
+    .episode-card-thumb > img:first-child {
+        width: 100% !important;
+        height: auto !important;
+
+        aspect-ratio: auto !important;
+
+        object-fit: contain !important;
+        object-position: center !important;
+
+        display: block !important;
+    }
+
+}
+
+/* Fonts */
+
+.inter-300 {
+    font-family: "Inter", sans-serif;
+    font-weight: 300 !important;
+    font-style: normal;
+}
+.inter-400 {
+    font-family: "Inter", sans-serif;
+    font-weight: 400 !important;
+    font-style: normal;
+}
+.inter-500 {
+    font-family: "Inter", sans-serif;
+    font-weight: 500 !important;
+    font-style: normal;
+}
+.inter-600 {
+    font-family: "Inter", sans-serif;
+    font-weight: 600 !important;
+    font-style: normal;
+}
+.inter-700 {
+    font-family: "Inter", sans-serif;
+    font-weight: 700 !important;
+    font-style: normal;
+}
+.inter-800 {
+    font-family: "Inter", sans-serif;
+    font-weight: 800 !important;
+    font-style: normal;
+}
+.inter-900 {
+    font-family: "Inter", sans-serif;
+    font-weight: 900 !important;
+    font-style: normal;
+}
+
+
+.sora-300 {
+    font-family: "Sora", sans-serif;
+    font-weight: 300 !important;
+    font-style: normal;
+}
+.sora-400 {
+    font-family: "Sora", sans-serif;
+    font-weight: 400 !important;
+    font-style: normal;
+}
+.sora-500 {
+    font-family: "Sora", sans-serif;
+    font-weight: 500 !important;
+    font-style: normal;
+}
+.sora-600 {
+    font-family: "Sora", sans-serif;
+    font-weight: 600 !important;
+    font-style: normal;
+}
+.sora-700 {
+    font-family: "Sora", sans-serif;
+    font-weight: 700 !important;
+    font-style: normal;
+}
+.sora-800 {
+    font-family: "Sora", sans-serif;
+    font-weight: 800 !important;
+    font-style: normal;
+}

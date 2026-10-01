@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="About Home Pakistan Venture Studio — A venture ecosystem built around people, structured support, and long-term thinking.">
+  <title>About Us — Home Pakistan Venture Studio</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/webp" href="./images/Logo.webp">
+  <link rel="shortcut icon" type="image/webp" href="./images/Logo.webp">
+
+  <!-- Google Fonts: Inter & Sora -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Components CSS -->
+  <link rel="stylesheet" href="./components/header.css">
+  <link rel="stylesheet" href="./components/footer.css">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="about.css">
+</head>
+
+<body>
+
+  <!-- ==========================================================================
+       HEADER COMPONENT (Loaded via components.js)
+       ========================================================================== -->
+  <div id="header"></div>
+
+  <!-- ==========================================================================
+       1. HERO SECTION (Screenshot 1)
+       ========================================================================== -->
+  <section class="about-hero-section text-center position-relative overflow-hidden" id="aboutHero">
+    <!-- Atmospheric Studio Backdrop & Gradient Overlay -->
+    <img src="images/aboutHeroBackground.png" alt="About Studio Backdrop" class="about-hero-backdrop">
+    <div class="about-hero-overlay"></div>
+
+    <div class="container position-relative py-lg-4" style="z-index: 2;">
+      <!-- Eyebrow Tag -->
+      <div class="d-inline-flex align-items-center gap-2 mb-3 px-3 py-1 rounded-pill">
+        <span class="eyebrow-dot"></span>
+        <span class="text-uppercase fw-bold eyebrow-tag">ABOUT US</span>
+      </div>
+
+      <!-- Headline -->
+      <h1 class="about-hero-title sora-800 text-white mb-3">A Stronger Way to Build Businesses In Pakistan.</h1>
+
+      <!-- Supporting Copy -->
+      <p class="about-hero-lead mx-auto mb-0">
+        Home Pakistan Venture Studio is building a Professional Business Family. It is for people who want to create,
+        support and grow serious businesses in Pakistan.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       2. WHAT HOME PAKISTAN IS + MISSION & VISION (Screenshot 1 Split Layout)
+       ========================================================================== -->
+  <section class="about-ecosystem-section container-fluid py-5" id="ecosystemSection">
+    <div class="container py-lg-5">
+      <div class="row g-5 align-items-center">
+
+        <!-- LEFT COLUMN: What Home Pakistan is, Mission & Vision -->
+        <div class="col-12 col-lg-6">
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <span class="eyebrow-dot"></span>
+            <span class="text-uppercase fw-bold eyebrow-tag">THE ECOSYSTEM</span>
+          </div>
+
+          <h2 class="h1 fw-bold text-white mb-3">A Venture Ecosystem Built Around People.</h2>
+
+          <p class="text-muted-custom mb-4" style="font-size: 16px; line-height: 1.7;">
+            Home Pakistan is not just a place for ideas. It is a connected business ecosystem. Entrepreneurs, mentors,
+            founders, co founders and business leaders each bring a different kind of value. Together, they help
+            stronger ventures grow.
+          </p>
+
+          <!-- Mission & Vision Cards -->
+          <div class="d-flex flex-column gap-3">
+            <!-- Mission Card -->
+            <div class="mission-vision-card">
+              <div class="d-flex align-items-center gap-2 mb-1">
+                <i class="bi bi-compass-fill" style="color: var(--purple-accent);"></i>
+                <h3 class="mb-0">Our Mission</h3>
+              </div>
+              <p>
+                To help capable people build stronger businesses. We connect ambition with structured support, practical
+                expertise, trusted relationships and long-term thinking.
+              </p>
+            </div>
+
+            <!-- Vision Card -->
+            <div class="mission-vision-card">
+              <div class="d-flex align-items-center gap-2 mb-1">
+                <i class="bi bi-eye-fill" style="color: var(--purple-accent);"></i>
+                <h3 class="mb-0">Our Vision</h3>
+              </div>
+              <p>
+                A Pakistan where more people can build successful businesses. Access to a Professional Business Family
+                should not depend on the family into which someone was born.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN: Ecosystem Image (Figma Screenshot 1 Team Meeting Frame) -->
+        <div class="col-12 col-lg-6">
+          <div class="ecosystem-photo-frame">
+            <!-- src empty as instructed; fallback placeholder displayed until user adds asset -->
+            <img src="./images/aboutSection.png " alt="Home Pakistan Venture Team in Studio"
+              class="w-100 h-100 object-fit-cover"
+              onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'team-photo-placeholder\'><i class=\'bi bi-people fs-1 mb-3 text-purple-accent\'></i><span class=\'fw-semibold text-white mb-1\'>Ecosystem & Team Strategy Image</span><span class=\'small text-muted\'>Add your image src in about.html</span></div>';">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       3. HOW WE BUILT THE ECOSYSTEM (Screenshot 1 White Section)
+       ========================================================================== -->
+  <section class="about-journey-section py-5" id="journeySection">
+    <div class="container py-lg-5">
+      <div class="text-center mb-5">
+        <div class="d-inline-flex align-items-center gap-2 mb-2">
+          <span class="eyebrow-dot"></span>
+          <span class="text-uppercase fw-bold eyebrow-tag">OUR JOURNEY</span>
+        </div>
+        <h2 class="h1 fw-bold mb-0">How We Built the Ecosystem</h2>
+      </div>
+
+      <div class="journey-flow-wrapper">
+        <div class="row row-cols-lg-4 row-cols-1 g-3 justify-content-center align-items-stretch position-relative">
+
+          <!-- STEP 01: THE IDEA -->
+          <div class="col journey-col">
+            <div class="journey-card card h-100 rounded-4 bg-white overflow-hidden shadow-sm position-relative">
+              <img src="images/test.png" class="card-img-top journey-card-img object-fit-cover"
+                alt="The Idea">
+              <div class="card-body p-4 d-flex flex-column">
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                  <span class="journey-number fw-bold">01</span>
+                  <div class="journey-icon-box rounded-circle d-flex align-items-center justify-content-center">
+                    <i class="bi bi-lightbulb-fill"></i>
+                  </div>
+                </div>
+                <h3 class="journey-step-title text-uppercase fw-bold mb-2">THE IDEA</h3>
+                <p class="journey-step-text card-text text-secondary small mb-0">
+                  We started with a simple, disruptive belief: that Pakistan's visionary builders, creators, and
+                  boundary-pushers have raw stories that are routinely left unsaid by mainstream platforms.
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- STEP 02: THE STUDIO -->
+          <div class="col journey-col">
+            <div class="journey-card card h-100 rounded-4 bg-white overflow-hidden shadow-sm position-relative">
+              <img src="images/test.png" class="card-img-top journey-card-img object-fit-cover"
+                alt="The Studio">
+              <div class="card-body p-4 d-flex flex-column">
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                  <span class="journey-number fw-bold">02</span>
+                  <div class="journey-icon-box rounded-circle d-flex align-items-center justify-content-center">
+                    <i class="bi bi-mic-fill"></i>
+                  </div>
+                </div>
+                <h3 class="journey-step-title text-uppercase fw-bold mb-2">THE STUDIO</h3>
+                <p class="journey-step-text card-text text-secondary small mb-0">
+                  We took massive technical strides to architect a world-class, soundproofed digital production facility
+                  in the cultural heart of Pakistan, prioritizing cinematic aesthetics and pure, high-fidelity sound.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 03: THE PLATFORM -->
+          <div class="col journey-col">
+            <div class="journey-card card h-100 rounded-4 bg-white overflow-hidden shadow-sm position-relative">
+              <img src="images/test.png" class="card-img-top journey-card-img object-fit-cover"
+                alt="The Platform">
+              <div class="card-body p-4 d-flex flex-column">
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                  <span class="journey-number fw-bold">03</span>
+                  <div class="journey-icon-box rounded-circle d-flex align-items-center justify-content-center">
+                    <i class="bi bi-diagram-3-fill"></i>
+                  </div>
+                </div>
+                <h3 class="journey-step-title text-uppercase fw-bold mb-2">THE PLATFORM</h3>
+                <p class="journey-step-text card-text text-secondary small mb-0">
+                  Beyond high-quality master media streams, we grew into a dynamic venture studio that translates pure
+                  ideas and high-trust community connections into active, accelerated digital solutions.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 04: THE FUTURE -->
+          <div class="col journey-col">
+            <div class="journey-card card h-100 rounded-4 bg-white overflow-hidden shadow-sm position-relative">
+              <img src="images/test.png" class="card-img-top journey-card-img object-fit-cover"
+                alt="The Future">
+              <div class="card-body p-4 d-flex flex-column">
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                  <span class="journey-number fw-bold">04</span>
+                  <div class="journey-icon-box rounded-circle d-flex align-items-center justify-content-center">
+                    <i class="bi bi-rocket-takeoff-fill"></i>
+                  </div>
+                </div>
+                <h3 class="journey-step-title text-uppercase fw-bold mb-2">THE FUTURE</h3>
+                <p class="journey-step-text card-text text-secondary small mb-0">
+                  By expanding formats, championing new independent voices, and multiplying collaborative creative
+                  investments, we aim to scale localized intellectual property and systemic commercial impact.
+                </p>
+              </div>
+              <!-- Last Step has no arrow -->
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       4. CORE VALUES SECTION
+       ========================================================================== -->
+  <section class="about-values-section py-2" id="valuesSection">
+    <div class="container py-lg-5">
+      <div class="d-flex align-items-center gap-2 mb-3">
+        <span class="eyebrow-dot"></span>
+        <span class="text-uppercase fw-bold eyebrow-tag">CORE BELIEFS</span>
+      </div>
+
+      <h1 class="sora-700 text-white">What Drives Our Ecosystem</h1>
+
+      <div class="values-ecosystem-section py-3 position-relative">
+        <div class="container">
+
+          <!-- CENTRAL ECOSYSTEM DIAGRAM WRAPPER -->
+          <div class="values-diagram-container position-relative my-5">
+
+            <!-- SVG CONNECTING LINES (DESKTOP) -->
+            <svg class="connecting-lines d-none d-lg-block position-absolute top-0 start-0 w-100 h-100"
+              xmlns="http://www.w3.org/2000/svg">
+              <!-- Lines connecting center (50%, 50%) to 5 surrounding node positions -->
+              <line x1="50%" y1="50%" x2="50%" y2="10%" class="connector-line" />
+              <line x1="50%" y1="50%" x2="85%" y2="35%" class="connector-line" />
+              <line x1="50%" y1="50%" x2="75%" y2="80%" class="connector-line" />
+              <line x1="50%" y1="50%" x2="25%" y2="80%" class="connector-line" />
+              <line x1="50%" y1="50%" x2="15%" y2="35%" class="connector-line" />
+            </svg>
+
+            <!-- CENTER CIRCLE -->
+            <div class="center-circle-wrapper d-flex align-items-center justify-content-center">
+              <div
+                class="center-circle text-center p-4 rounded-circle shadow-lg d-flex flex-column justify-content-center align-items-center">
+                <h2 class="h5 mb-0 sora-700 text-white">Home Pakistan Ecosystem</h2>
+              </div>
+            </div>
+
+            <!-- 5 CONNECTED BRANCHES CONTAINER -->
+            <div class="branches-wrapper">
+
+              <!-- BRANCH 1: Integrity -->
+              <article class="value-branch-card branch-1 p-3 rounded shadow-sm">
+                <div class="d-flex align-items-center gap-3 mb-2">
+                  <div class="branch-icon-box rounded-circle d-flex align-items-center justify-content-center">
+                    <i class="bi bi-shield-check text-purple"></i>
+                  </div>
+                  <h3 class="h6 mb-0 sora-700 text-white text-uppercase">Integrity</h3>
+                </div>
+                <p class="mb-0 inter-400 small">Protecting trust through honesty, responsibility, and clear
+                  communication.</p>
+              </article>
+
+              <!-- BRANCH 2: Contribution -->
+              <article class="value-branch-card branch-2 p-3 rounded shadow-sm">
+                <div class="d-flex align-items-center gap-3 mb-2">
+                  <div class="branch-icon-box rounded-circle d-flex align-items-center justify-content-center">
+                    <i class="bi bi-shield-check text-purple"></i>
+                  </div>
+                  <h3 class="h6 mb-0 sora-700 text-white text-uppercase">Contribution</h3>
+                </div>
+                <p class="mb-0 inter-400 small">Valuing people who bring useful work, expertise, and commitment.
+                </p>
+              </article>
+
+              <!-- BRANCH 3: Long Term Thinking -->
+              <article class="value-branch-card branch-3 p-3 rounded shadow-sm">
+                <div class="d-flex align-items-center gap-3 mb-2">
+                  <div class="branch-icon-box rounded-circle d-flex align-items-center justify-content-center">
+                    <i class="bi bi-shield-check text-purple"></i>
+                  </div>
+                  <h3 class="h6 mb-0 sora-700 text-white text-uppercase">Long Term Thinking</h3>
+                </div>
+                <p class="mb-0 inter-400 small">Building strong businesses through patient decisions and practical
+                  follow-through.</p>
+              </article>
+
+              <!-- BRANCH 4: Learning -->
+              <article class="value-branch-card branch-4 p-3 rounded shadow-sm">
+                <div class="d-flex align-items-center gap-3 mb-2">
+                  <div class="branch-icon-box rounded-circle d-flex align-items-center justify-content-center">
+                    <i class="bi bi-shield-check text-purple"></i>
+                  </div>
+                  <h3 class="h6 mb-0 sora-700 text-white text-uppercase">Learning</h3>
+                </div>
+                <p class="mb-0 inter-400 small">Turning real experience into knowledge that helps more people build
+                  better.</p>
+              </article>
+
+              <!-- BRANCH 5: Respect -->
+              <article class="value-branch-card branch-5 p-3 rounded shadow-sm">
+                <div class="d-flex align-items-center gap-3 mb-2">
+                  <div class="branch-icon-box rounded-circle d-flex align-items-center justify-content-center">
+                    <i class="bi bi-shield-check text-purple"></i>
+                  </div>
+                  <h3 class="h6 mb-0 sora-700 text-white text-uppercase">Respect</h3>
+                </div>
+                <p class="mb-0 inter-400 small">Treating every founder, professional, partner, and idea with
+                  seriousness.</p>
+              </article>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       5. OUR TEAM SECTION (Screenshot 2 Middle)
+       ========================================================================== -->
+  <!-- <section class="about-team-section py-5" id="teamSection">
+    <div class="container py-lg-5">
+      <div class="d-flex align-items-center gap-2 mb-3">
+        <span class="eyebrow-dot"></span>
+        <span class="text-uppercase fw-bold eyebrow-tag">THE CORE TEAM</span>
+      </div>
+
+      <h2 class="h1 fw-bold text-white mb-5">PEOPLE BUILDING THE ECOSYSTEM.</h2>
+
+      <div class="row row-cols-lg-4 row-cols-sm-2 row-cols-1 g-4">
+
+        <div class="col">
+          <div class="team-member-card">
+            <div class="team-photo-container">
+              <img src="images/guest-farooq-ali.png" alt="Bilal Masood" class="w-100 h-100 object-fit-cover">
+            </div>
+            <div class="team-member-body">
+              <h3 class="team-member-name">Bilal Masood</h3>
+              <div class="team-member-role">Co-Founder & Partner</div>
+              <p class="team-member-bio">
+                Directing studio venture architecture, institutional founder networks, and capital deployment across
+                Pakistan.
+              </p>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="team-member-link">
+                <i class="bi bi-linkedin"></i>
+                <span>Profile</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="team-member-card">
+            <div class="team-photo-container">
+              <img src="images/guest-sana-malik.png" alt="Zainab Raza" class="w-100 h-100 object-fit-cover">
+            </div>
+            <div class="team-member-body">
+              <h3 class="team-member-name">Zainab Raza</h3>
+              <div class="team-member-role">Lead Creative Director</div>
+              <p class="team-member-bio">
+                Shaping sovereign visual identities, executive brand narratives, and high-impact media production.
+              </p>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="team-member-link">
+                <i class="bi bi-linkedin"></i>
+                <span>Profile</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="team-member-card">
+            <div class="team-photo-container">
+              <img src="images/guest-kamran-gohar.png" alt="Omar Ali" class="w-100 h-100 object-fit-cover">
+            </div>
+            <div class="team-member-body">
+              <h3 class="team-member-name">Omar Ali</h3>
+              <div class="team-member-role">Chief Sound Engineer</div>
+              <p class="team-member-bio">
+                Overseeing broadcast-grade acoustic engineering and multi-track audio perfection in the studio.
+              </p>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="team-member-link">
+                <i class="bi bi-linkedin"></i>
+                <span>Profile</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="team-member-card">
+            <div class="team-photo-container">
+              <img src="images/guest-ayesha-malik.png" alt="Fatima Shah" class="w-100 h-100 object-fit-cover">
+            </div>
+            <div class="team-member-body">
+              <h3 class="team-member-name">Fatima Shah</h3>
+              <div class="team-member-role">Venture Partner</div>
+              <p class="team-member-bio">
+                Mentoring high-potential founders, scaling operational governance, and guiding cross-border market
+                entry.
+              </p>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="team-member-link">
+                <i class="bi bi-linkedin"></i>
+                <span>Profile</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- ==========================================================================
+       6. WANT TO WORK WITH US? CTA SECTION (Screenshot 2 Bottom)
+       ========================================================================== -->
+  <section class="about-cta-section py-5 position-relative text-center" id="workWithUsCta">
+    <!-- Authentic wave texture from images/cta-bg.png -->
+    <img src="images/cta-bg.png" alt="Wave Backdrop" class="about-cta-backdrop" onerror="this.style.display='none';">
+    <div class="about-cta-overlay"></div>
+
+    <div class="container position-relative py-5" style="z-index: 2;">
+      <h2 class="h1 fw-bold text-white mb-3">Want to Work With Us?</h2>
+      <p class="text-muted-custom mx-auto mb-4" style="max-width: 650px; font-size: 16px; line-height: 1.65;">
+        Whether you're looking to launch your premium brand podcast, explore corporate sponsorship, or join our venture
+        ecosystem — let's build together.
+      </p>
+      <div class="d-flex flex-wrap justify-content-center gap-3">
+        <a href="application.html" class="btn btn-solid-purple">JOIN THE TEAM</a>
+        <a href="application.html" class="btn btn-ghost-white">CONTACT US</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER COMPONENT (Loaded via components.js)
+       ========================================================================== -->
+  <div id="footer"></div>
+
+  <!-- Bootstrap 5.3 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+  <!-- Shared Components Loader -->
+  <script src="./components.js"></script>
+
+  <!-- Highlight Active Navigation Item for About Page -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Check periodically until components.js loads the header into DOM
+      const interval = setInterval(function () {
+        const aboutLink = document.querySelector('.navbar-nav a[href="./about.html"], .navbar-nav a[href="about.html"]');
+        if (aboutLink) {
+          document.querySelectorAll('.navbar-nav .nav-link').forEach(link => link.classList.remove('active'));
+          aboutLink.classList.add('active');
+          clearInterval(interval);
+        }
+      }, 50);
+      setTimeout(() => clearInterval(interval), 3000);
+    });
+  </script>
+</body>
+
+</html>

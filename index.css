@@ -1,0 +1,3302 @@
+:root {
+  --dark: #060813;
+  --section-dark: #0e1122;
+  --purple: #5c4ecc;
+  --purple-light: #8f85ff;
+  --muted: #94a3b8;
+}
+
+
+/* =========================
+   GLOBAL
+========================= */
+.outline *{
+  border: 1px solid black;
+}
+
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  overflow-x: hidden;
+  overscroll-behavior-x: none;
+  background: var(--dark);
+  color: white;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  touch-action: pan-y pinch-zoom;
+}
+
+main,
+section,
+.container,
+.container-fluid,
+.carousel,
+.carousel-inner {
+  max-width: 100%;
+}
+
+img,
+video,
+iframe {
+  max-width: 100%;
+}
+
+.site-container {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.site-header {
+  height: 88px;
+
+  background: rgba(14, 17, 34, 1);
+
+  border-bottom:
+    1px solid rgba(255, 255, 255, 0.07);
+
+  backdrop-filter: blur(12px);
+}
+
+.navbar {
+  height: 88px;
+  padding: 0;
+}
+
+.header-logo {
+  width: 210px;
+  height: 38px;
+
+  object-fit: contain;
+  object-position: left center;
+
+  display: block;
+}
+
+.header-logo-icon {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.header-brand-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1;
+}
+
+.brand-main {
+  color: #ffffff;
+  font-family: "Sora", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1.7px;
+  white-space: nowrap;
+}
+
+.brand-sub {
+  margin-top: 3px;
+
+  color: rgba(255, 255, 255, 0.85);
+
+  font-family: "Inter", sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1px;
+
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* navigation */
+
+.navbar-nav {
+  gap: 34px;
+}
+
+.navbar-nav .nav-link {
+  padding: 8px 0 !important;
+
+  color: rgba(255, 255, 255, 0.78);
+
+  font-size: 14px;
+  font-weight: 500;
+
+  transition: 0.2s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #fff;
+}
+
+
+/* Right Watch Podcast button */
+
+.nav-watch-btn {
+  min-width: 155px;
+  height: 44px;
+
+  align-items: center;
+  justify-content: center;
+
+  background: var(--purple);
+  color: #fff;
+
+  border: 1px solid var(--purple);
+  border-radius: 7px;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 0.4px;
+}
+
+.nav-watch-btn:hover {
+  background: #6b5ddd;
+  border-color: #6b5ddd;
+  color: white;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero-section {
+  height: 790px;
+  min-height: 680px;
+
+  padding-top: 88px;
+
+  background: var(--dark);
+}
+
+.hero-bg {
+  inset: 0;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+
+/* Figma dark treatment */
+
+.hero-overlay {
+  background:rgba(6, 8, 19, 0.8);
+}
+
+
+/* =========================
+   LEFT CONTENT
+========================= */
+
+.hero-content {
+  max-width: 650px;
+}
+
+
+.hero-eyebrow {
+  margin-bottom: 27px;
+
+  color: var(--muted);
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 0.3px;
+}
+
+
+.eyebrow-dot {
+  width: 6px;
+  height: 6px;
+
+  background: var(--purple-light);
+
+  border-radius: 50%;
+}
+
+
+.hero-title {
+  max-width: 640px;
+
+  margin: 0 0 28px;
+
+  font-family: "Sora", sans-serif;
+
+  font-size: clamp(1.875rem, 1.4286rem + 2.2321vw, 3.4375rem);
+  line-height: 1.08;
+
+  font-weight: 800;
+
+  letter-spacing: -1.8px;
+}
+
+.hero-description {
+    /* max-width: 620px;
+    margin-bottom: 18px; */
+  color: rgba(148, 163, 184, 1);
+
+  /* font-size: 16px; */
+  line-height: 1.6;
+}
+
+
+.hero-supporting {
+  /* max-width: 610px;
+
+  margin-bottom: 30px; */
+
+  color: rgba(148, 163, 184, 1);
+
+  font-size: 15px;
+  line-height: 1.55;
+
+  /* font-weight: 500; */
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.hero-buttons {
+  gap: 14px;
+}
+
+
+.hero-buttons .btn {
+  min-height: 46px;
+
+  padding: 12px 24px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  border-radius: 7px;
+
+  font-family: "Sora", sans-serif;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+
+.primary-hero-btn {
+  background: var(--purple);
+  border: 1px solid var(--purple);
+
+  color: white;
+}
+
+
+.primary-hero-btn:hover {
+  background: #6a5bd8;
+  border-color: #6a5bd8;
+
+  color: white;
+}
+
+
+.secondary-hero-btn {
+  background: transparent;
+
+  border:
+    1.5px solid rgba(255, 255, 255, 0.75);
+
+  color: white;
+}
+
+
+.secondary-hero-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+}
+
+
+/* =========================
+   VOICE NOTE WAVEFORM
+========================= */
+
+.hero-voice-note {
+  width: min(100%, 286px);
+  margin-top: 34px;
+}
+
+.hero-voice-toggle {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.hero-waveform-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 5px 0;
+  cursor: pointer;
+  user-select: none;
+}
+
+.hero-waveform {
+  min-width: 0;
+  width: 240px;
+  flex: 1 1 240px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 2px;
+  mask-image: linear-gradient(90deg, rgba(0, 0, 0, 0.42), #000 9%, #000 91%, rgba(0, 0, 0, 0.42));
+}
+
+.waveform-bar {
+  width: 3px;
+  height: var(--bar-height);
+  flex: 0 0 3px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #9b92ff 0%, #6657e8 52%, #5c4ecc 100%);
+  box-shadow: 0 0 7px rgba(143, 133, 255, 0.25);
+  opacity: 0.88;
+  transform: scaleY(1);
+  transform-origin: center;
+  transition: opacity 0.2s ease, filter 0.2s ease;
+}
+
+.hero-waveform-container:hover .waveform-bar {
+  opacity: 1;
+  filter: brightness(1.12);
+}
+
+.hero-voice-toggle:checked + .hero-waveform-container .waveform-bar {
+  animation: heroVoiceWave var(--speed) ease-in-out var(--delay) infinite alternate;
+}
+
+@keyframes heroVoiceWave {
+  0% {
+    transform: scaleY(0.32);
+  }
+
+  45% {
+    transform: scaleY(1.14);
+  }
+
+  100% {
+    transform: scaleY(0.58);
+  }
+}
+
+.waveform-play-btn {
+  position: relative;
+  width: 34px;
+  height: 34px;
+  flex: 0 0 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.hero-waveform-container:hover .waveform-play-btn {
+  transform: scale(1.07);
+  filter: brightness(1.1);
+}
+
+.waveform-play-icon {
+  width: 34px;
+  height: 34px;
+  display: block;
+  object-fit: contain;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+
+.waveform-pause-icon {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  border-radius: 50%;
+  background: #5c4ecc;
+  box-shadow: 0 4px 16px rgba(92, 78, 204, 0.42);
+  opacity: 0;
+  transform: scale(0.76);
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+
+.waveform-pause-icon::before,
+.waveform-pause-icon::after {
+  content: "";
+  width: 3px;
+  height: 12px;
+  border-radius: 2px;
+  background: #ffffff;
+}
+
+.hero-voice-toggle:checked + .hero-waveform-container .waveform-play-icon {
+  opacity: 0;
+  transform: scale(0.72);
+}
+
+.hero-voice-toggle:checked + .hero-waveform-container .waveform-pause-icon {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.hero-voice-toggle:checked + .hero-waveform-container .waveform-play-btn {
+  animation: voiceButtonPulse 1.6s ease-in-out infinite;
+}
+
+@keyframes voiceButtonPulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(143, 133, 255, 0);
+  }
+
+  50% {
+    box-shadow: 0 0 0 7px rgba(143, 133, 255, 0.1);
+  }
+}
+
+.hero-voice-toggle:focus-visible + .hero-waveform-container {
+  outline: 2px solid #8f85ff;
+  outline-offset: 7px;
+  border-radius: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-voice-toggle:checked + .hero-waveform-container .waveform-bar,
+  .hero-voice-toggle:checked + .hero-waveform-container .waveform-play-btn {
+    animation: none;
+  }
+}
+
+
+/* =========================
+   RIGHT HERO LOGO
+========================= */
+
+.hero-right {
+  transform: translateY(15px);
+}
+
+
+.hero-main-logo {
+  width: 310px;
+  height: 310px;
+
+  object-fit: contain;
+
+  margin-bottom: 28px;
+}
+
+
+.hero-logo-title {
+  margin: 0;
+
+  font-family: "Sora", sans-serif;
+
+  font-size: 29px;
+  line-height: 1.05;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+
+.hero-logo-title span {
+  display: block;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1199.98px) {
+
+  .site-container {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+
+  .navbar-nav {
+    gap: 20px;
+  }
+
+  .hero-title {
+    font-size: 49px;
+  }
+
+  .hero-main-logo {
+    width: 260px;
+    height: 260px;
+  }
+}
+
+
+/* =========================
+   MOBILE NAV
+========================= */
+
+@media (max-width: 991.98px) {
+
+  .site-container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .site-header,
+  .navbar {
+    height: 72px;
+  }
+
+  .site-header {
+    background: #060813;
+  }
+
+  .header-logo {
+    width: 207px;
+    height: 36px;
+  }
+
+  .custom-toggler {
+    width: 40px;
+    height: 40px;
+
+    padding: 7px;
+
+    border-radius: 10px;
+
+    border:
+      1px solid rgba(255, 255, 255, 0.08);
+
+    background:
+      rgba(255, 255, 255, 0.04);
+  }
+
+  .navbar-collapse {
+    position: absolute;
+
+    top: 72px;
+    left: 0;
+
+    width: 100%;
+
+    padding: 18px 24px 25px;
+
+    background: #060813;
+
+    border-top:
+      1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .navbar-nav {
+    gap: 5px;
+  }
+
+
+  /* Hero */
+
+  .hero-section {
+    height: auto;
+    min-height: 100svh;
+
+    padding-top: 72px;
+  }
+
+  .hero-section .row {
+    min-height: calc(100svh - 72px);
+  }
+
+  .hero-overlay {
+    background: rgba(6, 8, 19, 0.75);
+  }
+
+  .hero-content {
+    max-width: 100%;
+
+    padding-top: 60px;
+    padding-bottom: 35px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 575.98px) {
+
+  .site-container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+
+  /* Header keeps Figma 24px padding */
+
+  .site-header .site-container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+
+  .hero-content {
+    padding-top: 45px;
+  }
+
+
+  .hero-eyebrow {
+    margin-bottom: 20px;
+
+    font-size: 12px;
+  }
+
+
+
+  .hero-buttons {
+    width: 100%;
+  }
+
+
+  .hero-buttons .btn {
+    width: 100%;
+  }
+
+
+  .hero-voice-note {
+    margin-top: 30px;
+  }
+
+}
+
+/* =========================================
+   PODCAST SECTION
+========================================= */
+
+.podcast-section {
+  background: rgba(14, 17, 34, 1);
+  color: #ffffff;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.section-eyebrow {
+  color: rgba(148, 163, 184, 1);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+.eyebrow-dot {
+  width: 6px;
+  height: 6px;
+  background: rgba(143, 133, 255, 1);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.podcast-main-heading {
+  max-width: 760px;
+  font-size: 36px;
+  color: rgba(255, 255, 255, 1);
+  line-height: 1.2;
+  letter-spacing: -0.8px;
+}
+
+
+/* =========================================
+   THUMBNAIL
+========================================= */
+
+.podcast-thumbnail {
+  aspect-ratio: 16 / 9;
+
+  background: #060813;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.06);
+}
+
+.podcast-thumbnail-image {
+  display: block;
+  object-fit: cover;
+}
+
+.podcast-image-overlay {
+  background:
+    linear-gradient(180deg,
+      rgba(6, 8, 19, 0),
+      rgba(6, 8, 19, 0.12));
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   PLAY BUTTON
+========================================= */
+
+.podcast-play-btn {
+  width: 86px;
+  height: 86px;
+
+  background: transparent;
+
+  z-index: 2;
+  cursor: pointer;
+  transition: transform 0.25s ease;
+}
+
+.podcast-play-btn:hover {
+  transform: translate(-50%, -50%) scale(1.06) !important;
+}
+
+.play-icon {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+}
+
+
+/* =========================================
+   RIGHT CONTENT
+========================================= */
+
+.podcast-content {
+  max-width: 500px;
+}
+
+
+/* Badge */
+
+.podcast-badge {
+  padding: 7px 12px;
+
+  background: rgba(143, 133, 255, 1);
+
+  color: #ffffff;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 0.3px;
+}
+
+
+/* Feature Title */
+
+.podcast-feature-title {
+  font-family: "Sora", sans-serif;
+
+  font-size: 25px;
+  font-weight: 700;
+
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+
+
+/* =========================================
+   PROFILE
+========================================= */
+
+.podcast-profile-image {
+  width: 44px;
+  height: 44px;
+
+  flex-shrink: 0;
+
+  object-fit: cover;
+
+  background: #171b2c;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.08);
+}
+
+.podcast-profile-name {
+  font-family: "Sora", sans-serif;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.podcast-profile-role {
+  color: #7f8ba0;
+
+  font-size: 12px;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.podcast-description {
+  color: #94a3b8;
+
+  font-size: 13px;
+  font-weight: 400;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.podcast-btn {
+  min-height: 46px;
+
+  padding: 12px 24px;
+
+  background: rgba(143, 133, 255, 1);
+
+  border:
+    1px solid rgba(143, 133, 255, 1);
+
+  border-radius: 7px;
+
+  color: #ffffff;
+
+  font-family: "Sora", sans-serif;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  transition: 0.25s ease;
+}
+
+.podcast-btn:hover {
+  background: #6a5cda;
+
+  border-color: #6a5cda;
+
+  color: #ffffff;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 991.98px) {
+
+  .podcast-main-heading {
+    font-size: 32px;
+  }
+
+  .podcast-content {
+    max-width: 100%;
+  }
+
+  .podcast-feature-title {
+    font-size: 27px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 575.98px) {
+
+  .podcast-section {
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+  }
+
+  .podcast-main-heading {
+    font-size: 28px;
+  }
+
+  .podcast-feature-title {
+    font-size: 24px;
+    line-height: 1.3;
+  }
+
+  .podcast-description {
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .podcast-play-btn {
+    width: 64px;
+    height: 64px;
+  }
+
+  .podcast-btn {
+    width: 100%;
+  }
+
+}
+
+/* =========================================
+   EYEBROW
+========================================= */
+
+.section-eyebrow {
+  color: #94a3b8;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+
+.eyebrow-dot {
+  width: 6px;
+  height: 6px;
+
+  background: #8f85ff;
+
+  border-radius: 50%;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================
+   MAIN HEADING
+========================================= */
+
+.podcast-main-heading {
+  max-width: 760px;
+
+  font-family: "Sora", sans-serif;
+
+  font-size: 36px;
+  font-weight: 700;
+
+  line-height: 1.2;
+  letter-spacing: -0.8px;
+}
+
+
+/* =========================================
+   THUMBNAIL
+========================================= */
+
+.podcast-thumbnail {
+  width: 100%;
+
+  aspect-ratio: 16 / 9;
+
+  background: #060813;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.06);
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.18);
+}
+
+
+.podcast-thumbnail-image {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+
+/* subtle Figma overlay */
+
+.podcast-image-overlay {
+  background:
+    linear-gradient(180deg,
+      rgba(6, 8, 19, 0.02),
+      rgba(6, 8, 19, 0.13));
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   PLAY BUTTON
+========================================= */
+
+.podcast-play-btn {
+  width: 86px;
+  height: 86px;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  z-index: 2;
+
+  transition:
+    transform 0.25s ease;
+}
+
+
+.podcast-play-btn:hover {
+  transform:
+    translate(-50%, -50%) scale(1.06) !important;
+}
+
+
+.play-icon {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: contain;
+}
+
+
+/* =========================================
+   RIGHT SIDE CONTENT
+========================================= */
+
+.podcast-content {
+  max-width: 500px;
+}
+
+
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.podcast-btn {
+  min-height: 46px;
+
+  padding: 12px 24px;
+
+  background: #5c4ecc;
+
+  border:
+    1px solid #5c4ecc;
+
+  border-radius: 7px;
+
+  color: #ffffff;
+
+  font-family: "Sora", sans-serif;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+.podcast-btn:hover {
+  background: #6a5cda;
+
+  border-color: #6a5cda;
+
+  color: #ffffff;
+
+  transform: translateY(-1px);
+}
+
+
+/* ================================
+   PODCAST MODAL
+================================ */
+
+.podcast-modal-dialog {
+  max-width: 900px;
+}
+
+.podcast-modal-content {
+  background: #060813;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.podcast-modal-content .modal-body {
+  padding: 0 16px 16px;
+}
+
+.podcast-modal-content iframe {
+  border: 0;
+  display: block;
+}
+
+
+/* Tablet */
+
+@media (max-width: 991.98px) {
+
+  .podcast-modal-dialog {
+    max-width: 760px;
+  }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 767.98px) {
+
+  .podcast-modal-dialog {
+    max-width: calc(100% - 24px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 991.98px) {
+
+  .podcast-main-heading {
+    font-size: 32px;
+  }
+
+
+  .podcast-content {
+    max-width: 100%;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 575.98px) {
+
+  .podcast-section {
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+  }
+
+
+  .podcast-main-heading {
+    font-size: 28px;
+
+    line-height: 1.25;
+  }
+
+
+  .podcast-description {
+    font-size: 14px;
+
+    line-height: 1.65;
+  }
+
+
+  .podcast-btn {
+    width: 100%;
+  }
+
+
+  .podcast-play-btn {
+    width: 64px;
+    height: 64px;
+  }
+
+
+  .modal-dialog {
+    margin: 12px;
+  }
+
+}
+
+/* =========================================
+   SECTION 3
+========================================= */
+
+.support-section {
+
+  --support-eyebrow-font: "Inter", sans-serif;
+  --support-eyebrow-size: 11px;
+  --support-eyebrow-weight: 700;
+
+  --support-heading-font: "Sora", sans-serif;
+  --support-heading-size: 42px;
+  --support-heading-weight: 700;
+
+  --support-column-title-font: "Sora", sans-serif;
+  --support-column-title-size: 14px;
+  --support-column-title-weight: 600;
+
+  --support-number-font: "Sora", sans-serif;
+  --support-number-size: 20px;
+  --support-number-weight: 700;
+
+  --support-card-font: "Inter", sans-serif;
+  --support-card-size: 13px;
+  --support-card-weight: 400;
+
+  --support-closing-font: "Inter", sans-serif;
+  --support-closing-size: 14px;
+  --support-closing-weight: 400;
+
+
+  /* =========================
+       COLORS
+    ========================== */
+
+  --support-bg: #080d1a;
+
+  --support-card-bg: #151a2b;
+
+  --support-white: #ffffff;
+
+  --support-purple: rgba(143, 133, 255, 1);
+
+  --support-muted: #a8b0c0;
+
+  --support-closing-color: #9aa4b6;
+
+
+  background: var(--support-bg);
+  color: var(--support-white);
+}
+
+.section-dot {
+    width: 6px;
+    height: 6px;
+    background: #8f85ff;
+    border-radius: 50%;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.people-shaping {
+  color: rgba(148, 163, 184, 1);
+  font-size: 12px;
+}
+
+
+/* =========================================
+   TOP LABEL
+========================================= */
+
+.support-eyebrow {
+
+  font-family: var(--support-eyebrow-font);
+
+  font-size: var(--support-eyebrow-size);
+
+  font-weight: var(--support-eyebrow-weight);
+
+  color: #94a3b8;
+
+  letter-spacing: 0.4px;
+
+  text-transform: uppercase;
+}
+
+
+.eyebrow-dot {
+
+  width: 6px;
+  height: 6px;
+
+  flex-shrink: 0;
+
+  background: var(--support-purple);
+
+  border-radius: 50%;
+}
+
+
+/* =========================================
+   MAIN HEADING
+========================================= */
+
+.support-heading {
+
+  max-width: 650px;
+
+  font-family: var(--support-heading-font);
+
+  font-size: var(--support-heading-size);
+
+  font-weight: var(--support-heading-weight);
+
+  line-height: 1.2;
+
+  letter-spacing: -1px;
+}
+
+
+.support-heading span {
+
+  color: var(--support-purple);
+}
+
+
+/* =========================================
+   COMPARISON COLUMN HEADINGS
+========================================= */
+.comparison-title-card {
+  background: var(--support-card-bg);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+}
+
+.comparison-title-card h3 {
+  font-family: var(--support-column-title-font);
+  font-size: var(--support-column-title-size);
+  font-weight: var(--support-column-title-weight);
+  color: var(--support-white);
+  line-height: 1.4;
+}
+
+/* =========================================
+   COMPARISON CARDS
+========================================= */
+.comparison-card {
+  min-height: auto;
+  background: var(--support-card-bg);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 4px;
+}
+
+/* 01, 02, 03 Numbers Styling */
+.comparison-card .card-number {
+  font-family: var(--support-number-font, inherit);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--support-purple);
+  line-height: 1;
+}
+
+/* Card Headings (e.g. NO TRUSTED DECISION SUPPORT) */
+.comparison-card h6 {
+  color: var(--support-white, #ffffff);
+  font-family: var(--support-column-title-font, inherit);
+  letter-spacing: 0.5px;
+  font-size: 18px;
+}
+
+/* Card Description Text */
+.comparison-card p {
+  font-family: var(--support-card-font);
+  font-size: 14px;
+  font-weight: var(--support-card-weight);
+  color: var(--support-muted);
+  line-height: 1.55;
+}
+
+
+/* =========================================
+   VERSUS BADGE
+========================================= */
+.comparison-desktop {
+  position: relative;
+}
+/* Desktop: beech mein vertical line + badge */
+.comparison-desktop > .comparison-vs {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  z-index: 2;
+  width: 60px;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.comparison-vs::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  transform: translateX(-50%);
+  background: linear-gradient(180deg,
+      transparent,
+      rgba(143, 133, 255, 0.6) 12%,
+      rgba(143, 133, 255, 0.6) 88%,
+      transparent);
+}
+.vs-badge {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #151A2B;
+  color: #ffffff;
+  font-family: var(--support-column-title-font, inherit);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  border: 4px solid #8f85ff; /* apne section ka bg color */
+  /* box-shadow: 0 0 0 2px #8f85ff, 0 0 28px rgba(143, 133, 255, 0.55); */
+}
+
+@media (min-width: 992px) {
+  .vs-badge {
+    width: 56px;
+    height: 56px;
+    font-size: 15px;
+  }
+}
+
+/* Mobile: dono groups ke beech horizontal VS */
+.comparison-vs-mobile {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.comparison-vs-mobile::before,
+.comparison-vs-mobile::after {
+  content: "";
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(143, 133, 255, 0.6));
+}
+
+.comparison-vs-mobile::after {
+  background: linear-gradient(270deg, transparent, rgba(143, 133, 255, 0.6));
+}
+
+
+.ecosystem-card-container {
+  position: relative;
+  min-height: 420px;
+  background: #090d1d;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ecosystem-bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.ecosystem-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    180deg, 
+    rgba(9, 13, 29, 0.4) 0%, 
+    rgba(9, 13, 29, 0.75) 60%, 
+    rgba(9, 13, 29, 0.95) 100%
+  );
+}
+
+.ecosystem-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  min-height: 420px;
+}
+
+.ecosystem-eyebrow {
+  color: #8f85ff;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+}
+
+.ecosystem-title {
+  font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+  line-height: 1.25;
+  max-width: 650px;
+}
+
+.ecosystem-description {
+  font-size: 14px;
+  max-width: 580px;
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+.ecosystem-badge {
+  background: rgba(9, 13, 29, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #e2e8f0;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  backdrop-filter: blur(8px);
+}
+
+.badge-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #10b981; /* Soft Green Indicator Dot */
+  display: inline-block;
+}
+
+/* =========================================
+   CLOSING COPY
+========================================= */
+
+.support-closing-copy {
+
+  max-width: 760px;
+
+  font-family: var(--support-closing-font);
+
+  font-size: var(--support-closing-size);
+
+  font-weight: var(--support-closing-weight);
+
+  color: var(--support-closing-color);
+
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   RIGHT IMAGE
+========================================= */
+
+.support-image {
+
+  display: block;
+
+  width: 100%;
+
+  aspect-ratio: 6 / 7;
+
+  object-fit: cover;
+
+  object-position: center;
+}
+
+
+/* =========================================
+   LAPTOP
+========================================= */
+
+@media (max-width: 1199.98px) {
+
+  .support-section {
+
+    --support-heading-size: 36px;
+
+    --support-column-title-size: 13px;
+
+    --support-card-size: 13px;
+  }
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 991.98px) {
+
+  .support-section {
+
+    --support-heading-size: 34px;
+
+    --support-eyebrow-size: 10px;
+  }
+
+
+  /*
+       Tablet par image neeche stack hogi.
+       Tall image ki jagah wider proportion.
+    */
+
+  .support-image {
+
+    aspect-ratio: 16 / 10;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 575.98px) {
+
+  .support-section {
+
+    --support-heading-size: 29px;
+
+    --support-column-title-size: 14px;
+
+    --support-number-size: 18px;
+
+    --support-card-size: 14px;
+
+    --support-closing-size: 14px;
+  }
+
+
+  .support-heading {
+
+    line-height: 1.25;
+
+    letter-spacing: -0.6px;
+  }
+
+
+  .comparison-card {
+
+    min-height: auto;
+  }
+
+
+  .support-image {
+
+    aspect-ratio: 4 / 3;
+  }
+
+}
+
+/* =========================================
+   PEOPLE SECTION
+========================================= */
+
+.people-section {
+
+  /* =================================
+       EASY TYPOGRAPHY SETTINGS
+    ================================== */
+
+  --people-heading-font: "Sora", sans-serif;
+  --people-heading-size: 38px;
+  --people-heading-weight: 700;
+
+  --people-copy-font: "Inter", sans-serif;
+  --people-copy-size: 15px;
+  --people-copy-weight: 400;
+
+  --guest-name-font: "Sora", sans-serif;
+  --guest-name-size: 24px;
+  --guest-name-weight: 700;
+
+  --guest-role-font: "Inter", sans-serif;
+  --guest-role-size: 13px;
+  --guest-role-weight: 500;
+
+  --guest-org-font: "Inter", sans-serif;
+  --guest-org-size: 12px;
+  --guest-org-weight: 400;
+
+  --guest-profile-font: "Inter", sans-serif;
+  --guest-profile-size: 13px;
+  --guest-profile-weight: 400;
+
+  --guest-link-font: "Inter", sans-serif;
+  --guest-link-size: 13px;
+  --guest-link-weight: 600;
+
+
+  /* =================================
+       COLORS
+    ================================== */
+
+  --people-bg: #0e1122;
+
+  --people-white: #ffffff;
+
+  --people-muted: #94a3b8;
+
+  --people-light-muted: #b2bac8;
+
+  --people-purple: #8f85ff;
+
+
+  background: var(--people-bg);
+  color: var(--people-white);
+}
+
+
+/* =========================================
+   SECTION HEADER
+========================================= */
+
+.people-heading {
+
+  max-width: 900px;
+
+  font-family: var(--people-heading-font);
+
+  font-size: var(--people-heading-size);
+
+  font-weight: var(--people-heading-weight);
+
+  line-height: 1.2;
+
+  letter-spacing: -0.8px;
+}
+
+
+.people-copy {
+
+  max-width: 900px;
+
+  font-family: var(--people-copy-font);
+
+  font-size: var(--people-copy-size);
+
+  font-weight: var(--people-copy-weight);
+
+  color: var(--people-muted);
+
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   GUEST CARD
+========================================= */
+
+.guest-card {
+
+  width: 100%;
+
+  min-height: 500px;
+
+  background: #111625;
+}
+
+
+/* Image */
+
+.guest-image {
+
+  position: absolute;
+
+  inset: 0;
+
+  display: block;
+
+  object-fit: cover;
+
+  object-position: center;
+}
+
+
+/* Figma-style dark fade */
+
+.guest-overlay {
+
+  background:
+    linear-gradient(180deg,
+      rgba(6, 8, 19, 0.02) 30%,
+      rgba(6, 8, 19, 0.30) 52%,
+      rgba(6, 8, 19, 0.96) 100%);
+}
+
+
+/* =========================================
+   GUEST CONTENT
+========================================= */
+
+.guest-content {
+
+  z-index: 2;
+}
+
+
+.guest-name {
+
+  font-family: var(--guest-name-font);
+
+  font-size: var(--guest-name-size);
+
+  font-weight: var(--guest-name-weight);
+
+  color: var(--people-white);
+
+  line-height: 1.15;
+}
+
+
+.guest-role {
+
+  font-family: var(--guest-role-font);
+
+  font-size: var(--guest-role-size);
+
+  font-weight: var(--guest-role-weight);
+
+  color: var(--people-light-muted);
+}
+
+
+.guest-organisation {
+
+  font-family: var(--guest-org-font);
+
+  font-size: var(--guest-org-size);
+
+  font-weight: var(--guest-org-weight);
+
+  color: #7f8ba0;
+}
+
+
+.guest-profile {
+
+  font-family: var(--guest-profile-font);
+
+  font-size: var(--guest-profile-size);
+
+  font-weight: var(--guest-profile-weight);
+
+  color: #a4adbd;
+
+  line-height: 1.55;
+}
+
+
+.guest-profile-link {
+
+  font-family: var(--guest-link-font);
+
+  font-size: var(--guest-link-size);
+
+  font-weight: var(--guest-link-weight);
+
+  color: var(--people-purple);
+
+  text-decoration: none;
+}
+
+
+.guest-profile-link:hover {
+
+  color: #ffffff;
+}
+
+
+/* =========================================
+   BOOTSTRAP CAROUSEL BUTTONS
+========================================= */
+
+.people-carousel-control {
+
+  width: 44px;
+  height: 44px;
+
+  opacity: 1;
+
+  background: #5c4ecc;
+
+  border-radius: 50%;
+}
+
+
+.people-carousel-control:hover {
+
+  background: #6a5cda;
+}
+
+
+/* =========================================
+   LAPTOP
+========================================= */
+
+@media (max-width: 1199.98px) {
+
+  .people-section {
+
+    --people-heading-size: 34px;
+
+    --guest-name-size: 22px;
+  }
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 991.98px) {
+
+  .people-section {
+
+    --people-heading-size: 32px;
+  }
+
+
+  .guest-card {
+
+    min-height: 540px;
+
+    max-width: 520px;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 575.98px) {
+
+  .people-section {
+
+    --people-heading-size: 28px;
+
+    --people-copy-size: 14px;
+
+    --guest-name-size: 22px;
+
+    --guest-profile-size: 13px;
+  }
+
+
+  .guest-card {
+
+    min-height: 470px;
+  }
+
+}
+
+
+/* =========================================
+   SECTION 4 - HOME PAKISTAN MODEL
+========================================= */
+
+.model-section {
+
+  background: rgba(248, 249, 250, 1);
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.model-header {
+  max-width: 950px;
+}
+
+
+.model-dot {
+  width: 6px;
+  height: 6px;
+  flex-shrink: 0;
+  background: rgba(92, 78, 204, 1);
+  border-radius: 50%;
+}
+
+
+.model-eyebrow {
+  font-size: 12px;
+  color: rgba(71, 85, 105, 1);
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+
+.model-heading {
+  font-size: 36px;
+  color: rgba(15, 23, 42, 1);
+  line-height: 1.2;
+  letter-spacing: -0.8px;
+}
+
+
+.model-intro {
+
+  max-width: 900px;
+  font-size: 15px;
+
+  color: rgba(71, 85, 105, 1);
+
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   ECOSYSTEM DIAGRAM STYLES 
+========================================= */
+
+.ecosystem-diagram-container {
+  min-height: 620px;
+  width: 100%;
+}
+
+/* Connecting SVG Lines */
+.connecting-lines {
+  z-index: 1;
+  pointer-events: none;
+}
+
+.connector-line {
+  stroke: #8f85ff; /* Crisp Purple Accent */
+  stroke-width: 2px;
+  stroke-dasharray: 6; /* Stylish dashed connector look */
+}
+
+/* Center Circle Element */
+.center-circle-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+.center-circle {
+  width: 240px;
+  height: 240px;
+  background: #ffffff; /* Clean White Background */
+  border: 2px solid #8f85ff;
+  /* box-shadow: 0 10px 30px rgba(143, 133, 255, 0.15); */
+}
+
+.center-circle h2 {
+  color: #1f2937 !important; /* Dark Title Text */
+}
+
+.center-circle .supporting-line {
+  font-size: 0.75rem;
+  line-height: 1.3;
+  color: #6b7280 !important; /* Muted Secondary Text */
+}
+
+/* Branch Cards Core Style */
+.branch-card {
+  background: #ffffff;
+  border: 1px solid #8f85ff;
+  width: 260px;
+  z-index: 2;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.branch-card:hover {
+  /* transform: translateY(-4px); */
+  box-shadow: 0 8px 25px rgba(143, 133, 255, 0.2);
+}
+
+.branch-card h3 {
+  color: #1f2937 !important; /* Dark Heading Text */
+}
+
+.branch-card p {
+  color: #6b7280 !important; /* Subtle Paragraph Text */
+}
+
+.branch-icon-box {
+  width: 38px;
+  height: 38px;
+  background: rgba(143, 133, 255, 0.12);
+  color: #8f85ff;
+  font-size: 1.1rem;
+}
+
+/* DESKTOP RADIAL POSITIONS (d-lg-block) */
+@media (min-width: 992px) {
+  .branch-card {
+    position: absolute;
+  }
+
+  /* Branch 1: Top Center */
+  .branch-1 {
+    top: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* Branch 2: Top Right */
+  .branch-2 {
+    top: 22%;
+    right: 5%;
+  }
+
+  /* Branch 3: Bottom Right */
+  .branch-3 {
+    bottom: 5%;
+    right: 12%;
+  }
+
+  /* Branch 4: Bottom Left */
+  .branch-4 {
+    bottom: 5%;
+    left: 12%;
+  }
+
+  /* Branch 5: Top Left */
+  .branch-5 {
+    top: 22%;
+    left: 5%;
+  }
+}
+
+/* MOBILE & TABLET STACKED RESPONSIVE VIEW (< 992px) */
+@media (max-width: 991.98px) {
+  .ecosystem-diagram-container {
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .center-circle-wrapper {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+    margin-bottom: 1rem;
+  }
+
+  .center-circle {
+    width: 220px;
+    height: 220px;
+  }
+
+  .branches-wrapper {
+    width: 100%;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    position: relative;
+  }
+
+  /* Mobile Vertical Connector Line */
+  .branches-wrapper::before {
+    content: '';
+    position: absolute;
+    top: -1.5rem;
+    left: 50%;
+    width: 2px;
+    height: calc(100% + 1.5rem);
+    background: #8f85ff;
+    z-index: 1;
+  }
+
+  .branch-card {
+    width: 100%;
+    position: relative;
+  }
+}
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.model-btn {
+
+  min-height: 46px;
+
+  padding:
+    12px 24px;
+
+  background: #5c4ecc;
+
+  border:
+    1px solid #5c4ecc;
+
+  border-radius: 7px;
+
+  color: #ffffff;
+
+  font-family: "Sora", sans-serif;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+
+.model-btn:hover {
+
+  background: #6a5cda;
+
+  border-color: #6a5cda;
+
+  color: #ffffff;
+}
+
+
+
+/* =========================================
+   SECTION 9 - STUDIO GALLERY
+========================================= */
+
+.studio-section {
+  background: #060a16;
+  color: #ffffff;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.studio-header {
+  max-width: 950px;
+}
+
+
+.studio-dot {
+  width: 6px;
+  height: 6px;
+
+  flex-shrink: 0;
+
+  background: #8f85ff;
+
+  border-radius: 50%;
+}
+
+
+.studio-eyebrow {
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+
+  color: #8f99aa;
+
+  letter-spacing: 0.5px;
+
+  text-transform: uppercase;
+}
+
+
+.studio-heading {
+  max-width: 900px;
+
+  font-family: "Sora", sans-serif;
+  font-size: 34px;
+  font-weight: 700;
+
+  line-height: 1.2;
+  letter-spacing: -0.8px;
+}
+
+
+/* =========================================
+   IMAGE BOXES
+========================================= */
+
+.studio-image-box {
+  width: 100%;
+
+  overflow: hidden;
+
+  border-radius: 12px;
+
+  background: #111625;
+}
+
+
+.studio-image-box img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+
+/* Top image */
+
+.studio-image-large {
+  height: 300px;
+}
+
+
+/* Bottom images */
+
+.studio-image-small {
+  height: 260px;
+}
+
+
+/* =========================================
+   RIGHT PURPLE CARD
+========================================= */
+
+.studio-info-card {
+  min-height: 100%;
+
+  background: #5c4ecc;
+
+  border-radius: 14px;
+}
+
+
+/* Purple card heading */
+.studio-card-title {
+  max-width: 300px;
+
+  font-family: "Sora", sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+
+  line-height: 1.25;
+}
+
+.studio-card-copy {
+  max-width: 320px;
+
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+
+  color: rgba(255, 255, 255, 0.82);
+
+  line-height: 1.65;
+}
+
+
+/* =========================================
+   LAPTOP
+========================================= */
+
+@media (max-width: 1199.98px) {
+
+  .studio-heading {
+    font-size: 31px;
+  }
+
+
+  .studio-image-large {
+    height: 270px;
+  }
+
+
+  .studio-image-small {
+    height: 235px;
+  }
+
+
+  .studio-card-title {
+    font-size: 23px;
+  }
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 991.98px) {
+
+  .studio-heading {
+    font-size: 30px;
+  }
+
+
+  .studio-image-large {
+    height: 340px;
+  }
+
+
+  .studio-image-small {
+    height: 280px;
+  }
+
+
+  .studio-info-card {
+    min-height: 300px;
+  }
+
+
+  .studio-card-title,
+  .studio-card-copy {
+    max-width: 600px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 575.98px) {
+
+  .studio-heading {
+    font-size: 27px;
+
+    line-height: 1.28;
+  }
+
+
+  .studio-eyebrow {
+    font-size: 9px;
+  }
+
+
+  .studio-image-large,
+  .studio-image-small {
+    height: 235px;
+  }
+
+
+  .studio-info-card {
+    min-height: 250px;
+
+    border-radius: 12px;
+  }
+
+
+  .studio-image-box {
+    border-radius: 10px;
+  }
+
+
+  .studio-card-title {
+    font-size: 22px;
+  }
+
+
+  .studio-card-copy {
+    font-size: 14px;
+  }
+
+}
+
+/* =========================================
+   SECTION 8 - JOIN THE ECOSYSTEM
+========================================= */
+
+.join-section {
+  background: #f5f6f8;
+  color: #101728;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.join-header {
+  max-width: 950px;
+}
+
+
+.join-dot {
+  width: 6px;
+  height: 6px;
+
+  flex-shrink: 0;
+
+  background: #6554d9;
+
+  border-radius: 50%;
+}
+
+
+.join-eyebrow {
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+
+  color: #536071;
+
+  letter-spacing: 0.5px;
+
+  text-transform: uppercase;
+}
+
+
+.join-heading {
+  max-width: 900px;
+
+  font-family: "Sora", sans-serif;
+  font-size: 38px;
+  font-weight: 700;
+
+  line-height: 1.2;
+  letter-spacing: -0.8px;
+
+  color: #101728;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.join-card {
+  min-height: 310px;
+
+  background: #ffffff;
+
+  border: 1px solid #dfe3ea;
+
+  border-radius: 12px;
+
+  transition:
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+
+.join-card:hover {
+  border-color: #d2d6df;
+
+  box-shadow:
+    0 14px 35px rgba(16, 23, 40, 0.14);
+}
+
+
+/* Number */
+
+.join-number {
+  display: block;
+
+  font-family: "Sora", sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+
+  color: #6554d9;
+}
+
+
+/* Title */
+
+.join-card-title {
+  font-family: "Sora", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+
+  line-height: 1.3;
+
+  color: #101728;
+}
+
+
+/* Text */
+
+.join-card-copy {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+
+  line-height: 1.6;
+
+  color: #697487;
+}
+
+
+/* Card link */
+
+.join-card-link {
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+
+  color: #6554d9;
+
+  text-decoration: none;
+
+  text-transform: uppercase;
+}
+
+
+.join-card-link:hover {
+  color: #4436b7;
+}
+
+
+/* =========================================
+   LAPTOP
+========================================= */
+
+@media (max-width: 1199.98px) {
+
+  .join-heading {
+    font-size: 34px;
+  }
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 991.98px) {
+
+  .join-heading {
+    font-size: 32px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 575.98px) {
+
+  .join-heading {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+
+  .join-card {
+    min-height: auto;
+  }
+
+
+  .join-number {
+    font-size: 23px;
+  }
+
+
+  .join-card-title {
+    font-size: 17px;
+  }
+
+
+  .join-card-copy {
+    font-size: 14px;
+  }
+
+}
+
+
+/* =========================================
+   PODCAST EPISODES SECTION
+========================================= */
+
+.episodes-section {
+  background: #171c2d;
+  color: #ffffff;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.episodes-dot {
+  width: 6px;
+  height: 6px;
+
+  background: #8f85ff;
+  border-radius: 50%;
+
+  flex-shrink: 0;
+}
+
+
+.episodes-eyebrow {
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+
+  color: #9aa4b6;
+
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+
+.episodes-heading {
+  font-family: "Sora", sans-serif;
+  font-size: 38px;
+  font-weight: 700;
+
+  line-height: 1.2;
+  letter-spacing: -0.8px;
+}
+
+
+/* =========================================
+   TOP BUTTON
+========================================= */
+
+.episodes-youtube-btn {
+  min-height: 42px;
+  padding: 10px 20px;
+  background: #5c4ecc;
+  border: 1px solid #5c4ecc;
+  color: #ffffff;
+  border-radius: 5px;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.episodes-youtube-btn:hover {
+  background: #6a5cda;
+  border-color: #6a5cda;
+  color: #ffffff;
+}
+
+/* Mobile full width button */
+@media (max-width: 575.98px) {
+  .episodes-youtube-btn {
+    width: 100%;
+  }
+}
+
+/* =========================================
+   EPISODE CARD
+========================================= */
+
+.episode-card {
+  background: #1d2235;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  transition: box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.episode-card:hover {
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+}
+
+/* =========================================
+   CLICKABLE THUMBNAIL
+========================================= */
+
+.episode-thumbnail {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #0b0f1d;
+  cursor: pointer;
+}
+
+.episode-thumbnail img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+
+/* =========================================
+   CARD CONTENT & FLUID TYPOGRAPHY
+========================================= */
+
+/* Headings: min 28px, preferred 2.5vw + 1rem, max 38px */
+.episodes-heading {
+  font-size: clamp(1.75rem, 2.5vw + 1rem, 2.375rem);
+  line-height: 1.3;
+}
+
+.episode-industry {
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  color: #9b91ff;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+/* Title: min 16px, preferred 1vw + 0.8rem, max 20px */
+.episode-title {
+  font-family: "Sora", sans-serif;
+  font-size: clamp(1rem, 1vw + 0.8rem, 1.10rem);
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 1.35;
+}
+
+.episode-guest {
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #a6afbf;
+}
+
+/* Summary: min 13px, preferred 0.5vw + 0.75rem, max 14px */
+.episode-summary {
+  font-family: "Inter", sans-serif;
+  font-size: clamp(0.8125rem, 0.5vw + 0.75rem, 0.875rem);
+  font-weight: 400;
+  color: #8994a8;
+  line-height: 1.6;
+}
+
+/* =========================================
+   WATCH LINK
+========================================= */
+
+.episode-link {
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #8f85ff;
+  text-decoration: none;
+}
+
+.episode-link:hover {
+  color: #ffffff;
+}
+
+
+/* =========================================
+   SECTION 7 - ECOSYSTEM QUOTE
+========================================= */
+
+.ecosystem-quote-section {
+    background: #0e1122;
+    color: #ffffff;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.ecosystem-quote-content {
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   QUOTE ICON
+========================================= */
+
+.ecosystem-quote-icon {
+    width: 38px;
+    height: 38px;
+
+    object-fit: contain;
+}
+
+
+/* =========================================
+   QUOTE TEXT
+========================================= */
+
+.ecosystem-quote-text {
+    font-family: "Sora", sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+
+    line-height: 1.4;
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   BRAND LABEL
+========================================= */
+
+.ecosystem-quote-brand {
+    font-family: "Inter", sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+
+    color: #8f85ff;
+
+    letter-spacing: 0.6px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   LAPTOP
+========================================= */
+
+@media (max-width: 1199.98px) {
+
+    .ecosystem-quote-text {
+        font-size: 27px;
+    }
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 991.98px) {
+
+    .ecosystem-quote-text {
+        font-size: 25px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 575.98px) {
+
+    .ecosystem-quote-icon {
+        width: 32px;
+        height: 32px;
+    }
+
+
+    .ecosystem-quote-text {
+        font-size: 21px;
+        line-height: 1.5;
+    }
+
+
+    .ecosystem-quote-brand {
+        font-size: 9px;
+    }
+
+}
+
+/* =========================================
+   SECTION 7 - FINAL CTA
+========================================= */
+
+.final-cta-section {
+    min-height: 440px;
+
+    background: #050814;
+}
+
+
+/* =========================================
+   BACKGROUND
+========================================= */
+
+.final-cta-bg {
+    object-fit: cover;
+
+    object-position: center center;
+
+    z-index: 0;
+}
+
+
+.final-cta-overlay {
+    background:
+        linear-gradient(
+            180deg,
+            rgba(5, 8, 20, 0.30) 0%,
+            rgba(5, 8, 20, 0.05) 45%,
+            rgba(5, 8, 20, 0.18) 100%
+        );
+
+    z-index: 1;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.final-cta-section .site-container {
+    z-index: 2;
+    padding-top: 48px;
+    padding-bottom: 55px;
+}
+
+
+.final-cta-content {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+/* =========================================
+   LOGO
+========================================= */
+
+.final-cta-logo {
+    width: 190px;
+    height: auto;
+    object-fit: contain;
+}
+
+
+/* =========================================
+   EYEBROW
+========================================= */
+
+.final-cta-eyebrow {
+    font-family: "Inter", sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    color: #8f85ff;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   MAIN HEADING
+========================================= */
+
+.final-cta-heading {
+    max-width: 650px;
+
+    font-family: "Sora", sans-serif;
+
+    font-size: 38px;
+    font-weight: 700;
+
+    line-height: 1.15;
+
+    letter-spacing: -0.8px;
+}
+
+
+/* =========================================
+   COPY
+========================================= */
+
+.final-cta-copy {
+    max-width: 600px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 13px;
+    font-weight: 400;
+
+    line-height: 1.6;
+
+    color: #8f99ad;
+}
+
+
+/* =========================================
+   LAPTOP
+========================================= */
+
+@media (max-width: 1199.98px) {
+
+    .final-cta-section {
+        min-height: 420px;
+    }
+
+
+    .final-cta-heading {
+        font-size: 35px;
+    }
+
+
+    .final-cta-logo {
+        width: 180px;
+    }
+
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 991.98px) {
+
+    .final-cta-section {
+        min-height: 410px;
+    }
+
+
+    .final-cta-section .site-container {
+        padding-top: 45px;
+        padding-bottom: 48px;
+    }
+
+
+    .final-cta-heading {
+        max-width: 580px;
+
+        font-size: 32px;
+    }
+
+
+    .final-cta-copy {
+        max-width: 560px;
+
+        font-size: 13px;
+    }
+
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 575.98px) {
+
+    .final-cta-section {
+        min-height: 400px;
+    }
+
+
+    .final-cta-section .site-container {
+        padding-top: 40px;
+        padding-bottom: 45px;
+    }
+
+
+    .final-cta-logo {
+        width: 155px;
+    }
+
+
+    .final-cta-eyebrow {
+        font-size: 8px;
+
+        letter-spacing: 1.5px;
+    }
+
+
+    .final-cta-heading {
+        max-width: 340px;
+
+        font-size: 27px;
+
+        line-height: 1.2;
+    }
+
+
+    .final-cta-copy {
+        max-width: 340px;
+
+        font-size: 12px;
+
+        line-height: 1.55;
+    }
+
+}
+
+/* Fonts */
+
+
+.inter-300 {
+    font-family: "Inter", sans-serif;
+    font-weight: 300 !important;
+    font-style: normal;
+}
+.inter-400 {
+    font-family: "Inter", sans-serif;
+    font-weight: 400 !important;
+    font-style: normal;
+}
+.inter-500 {
+    font-family: "Inter", sans-serif;
+    font-weight: 500 !important;
+    font-style: normal;
+}
+.inter-600 {
+    font-family: "Inter", sans-serif;
+    font-weight: 600 !important;
+    font-style: normal;
+}
+.inter-700 {
+    font-family: "Inter", sans-serif;
+    font-weight: 700 !important;
+    font-style: normal;
+}
+.inter-800 {
+    font-family: "Inter", sans-serif;
+    font-weight: 800 !important;
+    font-style: normal;
+}
+.inter-900 {
+    font-family: "Inter", sans-serif;
+    font-weight: 900 !important;
+    font-style: normal;
+}
+
+
+.sora-300 {
+    font-family: "Sora", sans-serif;
+    font-weight: 300 !important;
+    font-style: normal;
+}
+.sora-400 {
+    font-family: "Sora", sans-serif;
+    font-weight: 400 !important;
+    font-style: normal;
+}
+.sora-500 {
+    font-family: "Sora", sans-serif;
+    font-weight: 500 !important;
+    font-style: normal;
+}
+.sora-600 {
+    font-family: "Sora", sans-serif;
+    font-weight: 600 !important;
+    font-style: normal;
+}
+.sora-700 {
+    font-family: "Sora", sans-serif;
+    font-weight: 700 !important;
+    font-style: normal;
+}
+.sora-800 {
+    font-family: "Sora", sans-serif;
+    font-weight: 800 !important;
+    font-style: normal;
+}

@@ -1,0 +1,636 @@
+/* ==========================================================================
+   Home Pakistan Venture Studio - Form Page Stylesheet (application.css)
+   Bootstrap 5.3 Enhanced Theme
+   ========================================================================== */
+
+:root {
+  /* Brand Colors */
+  --bg-darkest: #060813;
+  --bg-dark: #090d20;
+  --bg-card: #0e1122;
+  --bg-slate: #0b0f24;
+  --bg-light-section: #f8fafc;
+
+  /* Brand Purple Accents */
+  --purple-primary: #5c4ecc;
+  --purple-hover: #4e3fb8;
+  --purple-accent: #8f85ff;
+  --purple-light: #e0ddff;
+  --purple-glow: rgba(92, 78, 204, 0.35);
+
+  /* Text Colors */
+  --text-white: #ffffff;
+  --text-cream: #cbd5e1;
+  --text-muted-custom: #94a3b8;
+  --text-dark: #0f172a;
+  --text-body-gray: #475569;
+
+  /* Borders */
+  --border-light: rgba(255, 255, 255, 0.08);
+  --border-subtle: #1e293b;
+  --border-form: #e2e8f0;
+
+  /* Fonts */
+  --font-sora: "Sora", sans-serif;
+  --font-inter: "Inter", sans-serif;
+}
+
+/* Base Body Styles */
+body {
+  background-color: var(--bg-darkest);
+  font-family: var(--font-inter);
+  color: var(--text-cream);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.font-heading {
+  font-family: var(--font-sora);
+  color: var(--text-white);
+}
+
+/* ==========================================================================
+   1. Header / Navbar
+   ========================================================================== */
+.site-header {
+  background: rgba(6, 8, 19, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-light);
+  min-height: 80px;
+}
+
+.brand-title-text {
+  font-family: var(--font-inter);
+  font-size: 13.5px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #ffffff;
+  line-height: 1.1;
+  display: block;
+}
+
+.brand-subtitle-text {
+  font-family: var(--font-inter);
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: 1.8px;
+  color: var(--purple-accent);
+  line-height: 1.1;
+  margin-top: 2px;
+  display: block;
+}
+
+.site-header .nav-link {
+  font-family: var(--font-inter);
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85) !important;
+  transition: color 0.2s ease;
+  position: relative;
+  padding: 6px 0;
+}
+
+.site-header .nav-link:hover,
+.site-header .nav-link.active {
+  color: #ffffff !important;
+}
+
+.site-header .nav-link.active {
+  color: var(--purple-accent) !important;
+}
+
+.site-header .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--purple-accent);
+  transition: width 0.25s ease;
+}
+
+.site-header .nav-link:hover::after,
+.site-header .nav-link.active::after {
+  width: 100%;
+}
+
+.btn-nav-cta {
+  background-color: var(--purple-primary) !important;
+  border: 1px solid var(--purple-primary) !important;
+  color: #ffffff !important;
+  font-family: var(--font-inter);
+  font-size: 12.5px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 9px 20px !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 14px var(--purple-glow) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-decoration: none !important;
+  transition: all 0.2s ease !important;
+}
+
+.btn-nav-cta:hover {
+  background-color: var(--purple-hover) !important;
+  border-color: var(--purple-hover) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(92, 78, 204, 0.5) !important;
+}
+
+/* ==========================================================================
+   2. Hero Section
+   ========================================================================== */
+.form-hero-section {
+  position: relative;
+  padding-top: 160px;
+  padding-bottom: 90px;
+  background-color: var(--bg-darkest);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.form-hero-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.form-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(6, 8, 19, 0.8);
+  z-index: 1;
+}
+
+.form-hero-title {
+  font-size: clamp(34px, 4.5vw, 56px);
+  font-weight: 800;
+  letter-spacing: -1px;
+  line-height: 1.15;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.7);
+}
+
+.form-hero-lead {
+  max-width: 780px;
+  font-size: 17.5px;
+  line-height: 1.65;
+  color: #f1f5f9;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.7);
+}
+
+.eyebrow-tag {
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--purple-accent);
+}
+
+.eyebrow-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--purple-accent);
+  display: inline-block;
+}
+
+/* ==========================================================================
+   3. Main Application Form Section (White Card + Right Info)
+   ========================================================================== */
+/* .application-form, 
+.form-control-custom {
+    overflow: visible !important;
+} */
+
+.form-main-section {
+  background-color: #ffffff;
+  position: relative;
+}
+
+/* White Form Card matching Figma Screenshot 1 */
+.app-form-card {
+  background-color: #ffffff;
+  color: var(--text-dark);
+  border-radius: 16px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+}
+
+.app-form-card h2,
+.app-form-card h3 {
+  color: var(--text-dark);
+  font-family: var(--font-sora);
+}
+
+/* Application Category Nav Tabs */
+.app-tab-btn {
+  background: #f1f5f9;
+  color: #475569;
+  border: 1px solid #e2e8f0;
+  font-family: var(--font-inter);
+  font-size: 13.5px;
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.app-tab-btn:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+.app-tab-btn.active {
+  background: var(--purple-primary);
+  color: #ffffff;
+  border-color: var(--purple-primary);
+  box-shadow: 0 4px 14px var(--purple-glow);
+}
+
+/* Notice Box */
+.form-notice-box {
+  background-color: #f8fafc;
+  border-left: 4px solid var(--purple-primary);
+  border-radius: 8px;
+  padding: 14px 18px;
+  font-size: 13.5px;
+  color: #475569;
+  line-height: 1.55;
+}
+
+/* Form Inputs */
+.form-control-custom {
+  background-color: #ffffff;
+  border: 1px solid var(--border-form);
+  color: var(--text-dark);
+  font-family: var(--font-inter);
+  font-size: 14px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.form-control-custom:focus {
+  border-color: var(--purple-primary);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(92, 78, 204, 0.15);
+}
+
+.form-label-custom {
+  font-family: var(--font-inter);
+  font-size: 13px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.form-label-custom .text-danger {
+  color: #ef4444 !important;
+}
+
+.btn-send-application {
+  background-color: var(--purple-primary);
+  border: 1px solid var(--purple-primary);
+  color: #ffffff;
+  font-family: var(--font-sora);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  padding: 14px 28px;
+  border-radius: 8px;
+  width: 100%;
+  transition: all 0.1s ease;
+  box-shadow: 0 4px 16px var(--purple-glow);
+}
+
+.btn-send-application:hover {
+  background-color: var(--purple-hover);
+  border-color: var(--purple-hover);
+  color: #ffffff;
+  /* transform: translateY(-2px); */
+  box-shadow: 0 8px 24px rgba(92, 78, 204, 0.5);
+}
+
+/* Success Banner */
+.submission-success-card {
+  background: #f0fdf4;
+  border: 1.5px solid #86efac;
+  border-radius: 12px;
+  padding: 24px;
+  color: #166534;
+}
+
+/* Right Side: Contact Information (Figma White Section) */
+.contact-info-title {
+  color: #0f172a;
+  font-family: var(--font-sora);
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.contact-info-desc {
+  color: #64748b;
+  font-family: var(--font-inter);
+  font-size: 15px;
+  line-height: 1.65;
+  max-width: 440px;
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 6px 0;
+}
+
+.contact-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background-color: #060813;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.contact-icon-box i {
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.contact-item-label {
+  font-family: var(--font-inter);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #64748b;
+  line-height: 1.2;
+  margin-bottom: 3px;
+}
+
+.contact-item-value {
+  font-family: var(--font-inter);
+  font-size: 15px;
+  font-weight: 700;
+  color: #0f172a !important;
+  text-decoration: none;
+  line-height: 1.3;
+  transition: color 0.2s ease;
+}
+
+.contact-item-value:hover {
+  color: var(--purple-primary) !important;
+}
+
+.follow-story-label {
+  font-family: var(--font-inter);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #64748b;
+  margin-bottom: 12px;
+}
+
+.social-pill-btn {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  color: #0f172a;
+  font-family: var(--font-inter);
+  font-size: 12.5px;
+  font-weight: 600;
+  padding: 8px 20px;
+  border-radius: 100px;
+  text-decoration: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition: all 0.2s ease;
+}
+
+.social-pill-btn:hover {
+  border-color: var(--purple-primary);
+  color: var(--purple-primary);
+  background-color: #faf5ff;
+  box-shadow: 0 4px 12px rgba(92, 78, 204, 0.15);
+}
+
+/* ==========================================================================
+   4. Physical Epicenter Section (Screenshot 2)
+   ========================================================================== */
+.epicenter-section {
+  background-color: #060813;
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.studio-building-frame {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: #0b0f24;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.7);
+}
+
+.studio-building-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ==========================================================================
+   5. Frequently Asked Questions Section (Screenshot 3 - White Background)
+   ========================================================================== */
+.faq-section {
+  background-color: #ffffff;
+  color: var(--text-dark);
+}
+
+.faq-section h2 {
+  color: var(--text-dark);
+}
+
+.faq-accordion .accordion-item {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px !important;
+  margin-bottom: 14px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.faq-accordion .accordion-button {
+  background-color: #ffffff;
+  color: #0f172a;
+  font-family: var(--font-sora);
+  font-size: 16.5px;
+  font-weight: 600;
+  padding: 20px 24px;
+  box-shadow: none !important;
+}
+
+.faq-accordion .accordion-button::after {
+  content: "+";
+  background-image: none !important;
+  font-family: var(--font-inter);
+  font-size: 24px;
+  font-weight: 400;
+  color: #64748b;
+  width: auto;
+  height: auto;
+  transform: none !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+
+.faq-accordion .accordion-button:not(.collapsed) {
+  color: var(--purple-primary);
+  background-color: #ffffff;
+}
+
+.faq-accordion .accordion-button:not(.collapsed)::after {
+  content: "+";
+  color: var(--purple-primary);
+}
+
+.faq-accordion .accordion-body {
+  color: #475569;
+  font-family: var(--font-inter);
+  font-size: 15px;
+  line-height: 1.65;
+  padding: 0 24px 22px 24px;
+}
+
+/* ==========================================================================
+   6. Ready to Create Something CTA (Screenshot 4)
+   ========================================================================== */
+.create-cta-section {
+  position: relative;
+  background-color: #060813;
+  border-top: 1px solid var(--border-light);
+  overflow: hidden;
+}
+
+.create-cta-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.create-cta-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at center,
+    rgba(14, 17, 34, 0.8) 0%,
+    rgba(6, 8, 19, 0.95) 100%
+  );
+  z-index: 1;
+}
+
+.btn-solid-purple {
+  background-color: var(--purple-primary);
+  border: 1px solid var(--purple-primary);
+  color: #ffffff;
+  font-family: var(--font-sora);
+  font-weight: 600;
+  font-size: 13.5px;
+  padding: 12px 28px;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px var(--purple-glow);
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-solid-purple:hover {
+  background-color: var(--purple-hover);
+  border-color: var(--purple-hover);
+  color: #ffffff;
+  /* transform: translateY(-2px); */
+  /* box-shadow: 0 8px 24px rgba(92, 78, 204, 0.5); */
+}
+
+.btn-ghost-white {
+  background-color: transparent;
+  border: 1.5px solid rgba(255, 255, 255, 0.6);
+  color: #ffffff;
+  font-family: var(--font-sora);
+  font-weight: 600;
+  font-size: 13.5px;
+  padding: 12px 28px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-ghost-white:hover {
+  border-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  /* transform: translateY(-2px); */
+}
+
+/* ==========================================================================
+   7. Site Footer
+   ========================================================================== */
+.site-footer {
+  background-color: #03050c;
+  border-top: 1px solid var(--border-subtle);
+  font-family: var(--font-inter);
+}
+
+.footer-link {
+  color: var(--text-muted-custom) !important;
+  font-size: 14px;
+  transition: color 0.2s ease;
+  text-decoration: none;
+}
+
+.footer-link:hover,
+.footer-link.active {
+  color: #ffffff !important;
+}
+
+.footer-link.active {
+  color: var(--purple-accent) !important;
+}
