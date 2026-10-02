@@ -232,27 +232,11 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   line-height: 1.6;
   font-size: 0.85rem;
 }
-
-/* DESKTOP CONNECTING ARROWS BETWEEN CARDS */
-@media (min-width: 992px) {
-  .journey-step-arrow {
-    position: absolute;
-    top: 50%;
-    right: -17px;
-    transform: translateY(-50%);
-    width: 34px;
-    height: 34px;
-    background: #ffffff;
-    border: 1px solid #635bff;
-    color: #635bff;
-    border-radius: 50%;
-    z-index: 10;
-    font-size: 1rem;
-    box-shadow: 0 4px 10px rgba(99, 91, 255, 0.15);
-  }
+.journey-steps {
+  color: #635bff;
+  line-height: 1.6;
+  font-size: 0.85rem;
 }
-
-
 
 /* ==========================================================================
    4. Core Values Section (Screenshot 2 - Dark Cards)
