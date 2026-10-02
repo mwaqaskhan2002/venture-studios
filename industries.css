@@ -299,49 +299,33 @@ body.industries-page {
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(180deg, rgba(9, 13, 29, 0.75) 0%, rgba(9, 13, 29, 0.4) 50%, rgba(9, 13, 29, 0.85) 100%);
+  background: rgba(9, 13, 29, 0.25);
 }
 
 /* Step Number & Icon Z-Index Positioning & Visual Styling */
-.industry-number,
 .industry-icon {
   position: relative;
   z-index: 2;
 }
 
-.industry-number {
-  color: #ffffff;
-  font-family: var(--industries-sora, "Sora", sans-serif);
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 0.8px;
-  background: var(--industries-purple, #5c4ecc);
-  padding: 4px 10px;
-  border-radius: 8px;
-  border: 1px solid rgba(170, 163, 255, 0.3);
-  backdrop-filter: blur(4px);
-}
-
 .industry-icon {
-  width: 44px;
-  height: 44px;
+  width: 70px;
+  height: 70px;
   display: grid;
   place-items: center;
-  border: 1px solid rgba(143, 133, 255, 0.4);
+  border: 1px solid #0F1225;
   border-radius: 8px;
-  background: var(--industries-purple, #5c4ecc);
-  color: #ffffff;
-  font-size: 20px;
-  backdrop-filter: blur(6px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  background: #0F1225;
+  color: rgba(143, 133, 255, 1);
+  font-size: 30px;
   transition: color 0.25s ease, background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.industry-card:hover .industry-icon {
+/* .industry-card:hover .industry-icon {
   background: var(--industries-purple, #5c4ecc);
   color: #ffffff;
   box-shadow: 0 8px 20px rgba(92, 78, 204, 0.4);
-}
+} */
 
 
 /* Business Tags Styling */

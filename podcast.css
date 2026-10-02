@@ -1216,7 +1216,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   transform: scale(1.05);
 } */
 
-.card-play-btn {
+/* .card-play-btn {
   width: 44px;
   height: 44px;
   background: rgba(14, 17, 34, 0.75);
@@ -1230,7 +1230,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   color: #ffffff;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-}
+} */
 
 .episode-card:hover .card-play-btn {
   background: var(--purple-primary);
