@@ -238,6 +238,54 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   font-size: 0.85rem;
 }
 
+/* =========================================
+   JOURNEY ARROWS (cards ko connect karne wale)
+========================================= */
+
+/* Arrow ko card ke bahar rakhne ke liye column ko positioning context dein */
+.journey-col {
+  position: relative;
+}
+
+/* Default (mobile): card ke neeche beech mein, neeche ki taraf */
+.journey-step-arrow {
+  position: absolute;
+  z-index: 10;
+  left: 50%;
+  top: calc(100% + 8px);
+  transform: translate(-50%, -50%);
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  /* background: #ffffff;
+  border: 1px solid #635bff; */
+  border-radius: 50%;
+  color: black;
+  font-size: 32px;
+  /* box-shadow: 0 4px 10px rgba(99, 91, 255, 0.15); */
+}
+
+.journey-step-arrow i {
+  display: block;
+  line-height: 1;
+  transform: rotate(90deg);
+}
+
+/* Desktop (4 cards): do cards ke beech gap mein, dayen taraf */
+@media (min-width: 992px) {
+  .journey-step-arrow {
+    top: 50%;
+    left: auto;
+    right: -17px;
+    transform: translateY(-50%);
+  }
+
+  .journey-step-arrow i {
+    transform: none;
+  }
+}
+
 /* ==========================================================================
    4. Core Values Section (Screenshot 2 - Dark Cards)
    ========================================================================== */
