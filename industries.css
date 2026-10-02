@@ -313,10 +313,10 @@ body.industries-page {
   height: 70px;
   display: grid;
   place-items: center;
-  border: 1px solid #0F1225;
-  border-radius: 8px;
-  background: #0F1225;
-  color: rgba(143, 133, 255, 1);
+  border: 2px solid rgba(255, 255, 255, 0.04); /* Soft subtle border */
+  border-radius: 18px;
+  background: #0B0E1D; /* Dark purple/navy shade as seen in reference */
+  color: #9B8CFF; /* Bright lavender/violet icon color */
   font-size: 30px;
   transition: color 0.25s ease, background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
