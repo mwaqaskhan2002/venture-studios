@@ -26,6 +26,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap"
     rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet"/>
   <link rel="stylesheet" href="./index.css">
   <link rel="stylesheet" href="./components/header.css">
   <link rel="stylesheet" href="./components/footer.css">
@@ -144,10 +145,17 @@
                   <span class="waveform-bar" style="--bar-height: 22px; --delay: -0.68s; --speed: 0.63s;"></span>
                 </span>
 
-                <span class="waveform-play-btn" aria-hidden="true">
+                <!-- <span class="waveform-play-btn" aria-hidden="true">
                   <img src="./images/icon-podcast-play.svg" alt="" class="waveform-play-icon">
+                  <i class="ri-play-circle-line waveform-play-icon"></i>
                   <span class="waveform-pause-icon"></span>
+                </span> -->
+
+                <span class="waveform-play-btn" aria-hidden="true">
+                  <i class="bi bi-play-fill waveform-icon waveform-icon-play"></i>
+                  <i class="bi bi-pause-fill waveform-icon waveform-icon-pause"></i>         
                 </span>
+
               </label>
             </div>
 

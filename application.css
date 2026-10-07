@@ -261,7 +261,7 @@ h6,
   background: var(--purple-primary);
   color: #ffffff;
   border-color: var(--purple-primary);
-  box-shadow: 0 4px 14px var(--purple-glow);
+  /* box-shadow: 0 4px 14px var(--purple-glow); */
 }
 
 /* Notice Box */

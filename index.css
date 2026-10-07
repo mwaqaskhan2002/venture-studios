@@ -407,14 +407,21 @@ iframe {
   }
 }
 
+/* =========================================
+   HERO VOICE NOTE: play / pause icon toggle
+========================================= */
+
 .waveform-play-btn {
   position: relative;
-  width: 34px;
-  height: 34px;
-  flex: 0 0 34px;
+  box-sizing: border-box;
+  width: 40px;
+  height: 40px;
+  flex: 0 0 40px;
   display: grid;
   place-items: center;
   border-radius: 50%;
+  background: #ffffff;
+  border: 3px solid #5c4ecc;
   transition: transform 0.2s ease, filter 0.2s ease;
 }
 
@@ -423,44 +430,37 @@ iframe {
   filter: brightness(1.1);
 }
 
-.waveform-play-icon {
-  width: 34px;
-  height: 34px;
-  display: block;
-  object-fit: contain;
-  transition: opacity 0.18s ease, transform 0.18s ease;
-}
-
-.waveform-pause-icon {
+/* Dono icons ek hi jagah par stack hote hain */
+.waveform-icon {
   position: absolute;
   inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 4px;
-  border-radius: 50%;
-  background: #5c4ecc;
-  box-shadow: 0 4px 16px rgba(92, 78, 204, 0.42);
-  opacity: 0;
-  transform: scale(0.76);
+  font-size: 20px;
+  line-height: 1;
+  color: #5c4ecc;
   transition: opacity 0.18s ease, transform 0.18s ease;
 }
 
-.waveform-pause-icon::before,
-.waveform-pause-icon::after {
-  content: "";
-  width: 3px;
-  height: 12px;
-  border-radius: 2px;
-  background: #ffffff;
+/* Play triangle ko nazar ke hisaab se beech mein laane ke liye */
+.waveform-icon-play {
+  padding-left: 2px;
 }
 
-.hero-voice-toggle:checked + .hero-waveform-container .waveform-play-icon {
+/* Default: play dikhta hai, pause chhupa hota hai */
+.waveform-icon-pause {
   opacity: 0;
   transform: scale(0.72);
 }
 
-.hero-voice-toggle:checked + .hero-waveform-container .waveform-pause-icon {
+/* Checked (playing): play chhupta hai, pause aata hai */
+.hero-voice-toggle:checked + .hero-waveform-container .waveform-icon-play {
+  opacity: 0;
+  transform: scale(0.72);
+}
+
+.hero-voice-toggle:checked + .hero-waveform-container .waveform-icon-pause {
   opacity: 1;
   transform: scale(1);
 }
@@ -470,14 +470,8 @@ iframe {
 }
 
 @keyframes voiceButtonPulse {
-  0%,
-  100% {
-    box-shadow: 0 0 0 0 rgba(143, 133, 255, 0);
-  }
-
-  50% {
-    box-shadow: 0 0 0 7px rgba(143, 133, 255, 0.1);
-  }
+  0%, 100% { box-shadow: 0 0 0 0 rgba(143, 133, 255, 0); }
+  50%      { box-shadow: 0 0 0 7px rgba(143, 133, 255, 0.1); }
 }
 
 .hero-voice-toggle:focus-visible + .hero-waveform-container {
