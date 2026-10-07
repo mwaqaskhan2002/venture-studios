@@ -72,20 +72,14 @@
 
         <!-- Eyebrow -->
         <div class="podcast-hero-eyebrow d-flex justify-content-center align-items-center gap-2 mb-0">
-
           <span class="podcast-hero-dot"></span>
-
           <span class="hero-label inter-700">
             HOME PAKISTAN PODCAST
           </span>
-
         </div>
-
         <h1 class="podcast-hero-heading sora-800 mx-auto mb-2">
           Pakistan’s Sharpest Business Conversations Start Here.
         </h1>
-
-
         <p class="podcast-hero-copy mx-auto inter-400">
           Hosted by Azim Adil Sheikh, the Home Pakistan Podcast brings practical
           business experience into the open. We speak with industry-leading
@@ -98,7 +92,6 @@
         <a href="https://www.youtube.com/channel/UCfmvndr2jm7QHW4UyF9baTQ" target="_blank" rel="noopener noreferrer"
           class="btn podcast-hero-btn d-inline-flex align-items-center sora-600 gap-2">
           Visit Home Pakistan on YouTube
-
           <i class="bi bi-arrow-up-right"></i>
         </a>
 
@@ -133,51 +126,40 @@
         <!-- =========================
            LEFT VIDEO
       ========================== -->
-        <div class="col-12 col-lg-7">
+      <div class="col-12 col-lg-7">
 
-          <div class="podcast-building-video position-relative" role="button" data-bs-toggle="modal"
-            data-bs-target="#podcastModal" aria-label="Play Home Pakistan Podcast">
-
-            <img src="./images/featured-video-frame.png" alt="Home Pakistan Podcast"
-              class="podcast-building-image w-100 d-block">
-
-
-            <!-- Play Button -->
-            <div class="position-absolute
-                   top-50 start-50
-                   translate-middle">
-
-              <img src="./images/icon-play-button.svg" alt="Play" class="podcast-building-play">
-
-            </div>
-
+        <button type="button"
+                class="podcast-building-video position-relative d-block w-100 p-0 border-0 bg-transparent"
+                data-bs-toggle="modal"
+                data-bs-target="#podcastBuildingModal"
+                data-youtube-url="https://youtu.be/YnoX8xuLvEU?si=yAkM3-fja7mGCik0"
+                aria-label="Play Home Pakistan Podcast">
+      
+          <!-- src JS khud lagayegi -->
+          <img alt="Home Pakistan Podcast" class="podcast-building-image w-100 d-block object-fit-cover">
+      
+          <!-- Play Button -->
+          <div class="position-absolute top-50 start-50 translate-middle">
+            <img src="./images/icon-play-button.svg" alt="" class="podcast-building-play">
           </div>
-
-        </div>
+      
+        </button>
+      
+      </div>
 
 
         <!-- =========================
            RIGHT CONTENT
       ========================== -->
         <div class="col-12 col-lg-5">
-
-
           <!-- Heading -->
           <h2 class="podcast-building-heading mb-4 sora-700">
-
             Every Conversation Should Create More Than Views.
-
           </h2>
-
-
           <!-- Guest / Profile -->
           <div class="podcast-building-profile d-flex align-items-center gap-3 mb-4">
-
             <img src="./images/guest-azim-avatar.png" alt="" class="podcast-building-avatar">
-
-
             <div>
-
               <h3 class="podcast-building-name mb-1 sora-600">
                 Azim Adil Sheikh
               </h3>
@@ -185,35 +167,27 @@
               <p class="podcast-building-role inter-400 mb-0">
                 Host, Home Pakistan Podcast
               </p>
-
             </div>
-
           </div>
 
 
           <!-- Main Copy -->
           <p class="podcast-building-copy mb-4 inter-400">
-
             This podcast is built for people who take business seriously.
             It shares useful lessons. It spotlights capable people.
             It brings attention to important industries. It helps a stronger
             business community grow in Pakistan. A conversation can become
             a lesson. A lesson can become a connection. A connection can
             become an opportunity.
-
           </p>
 
 
           <!-- CTA -->
           <button type="button" class="btn sora-600 podcast-building-watch-btn" data-bs-toggle="modal"
-            data-bs-target="#podcastModal">
-
+            data-bs-target="#podcastBuildingModal">
             WATCH NOW
-
             <i class="bi bi-arrow-right ms-2"></i>
-
           </button>
-
         </div>
 
       </div>
@@ -920,6 +894,20 @@
 
   </div>
 
+  <div class="modal fade" id="podcastBuildingModal" tabindex="-1" aria-label="Home Pakistan Podcast video"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-black border-0">
+        <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3 z-3"
+          data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="ratio ratio-16x9">
+          <iframe id="podcastBuildingFrame" src="" title="Home Pakistan Podcast"
+            allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
   <div id="footer"></div>
 
@@ -929,9 +917,45 @@
     crossorigin="anonymous"></script>
 
   <script src="./components.js"></script>
-
-
   <script>
+    (function () {
+      var trigger = document.querySelector(".podcast-building-video");
+      var modalEl = document.getElementById("podcastBuildingModal");
+      if (!trigger || !modalEl) return;
+
+      var frame = document.getElementById("podcastBuildingFrame");
+      var thumb = trigger.querySelector(".podcast-building-image");
+
+      // watch?v=, youtu.be/, /embed/, /shorts/, /live/ sab links chalte hain
+      function getYouTubeId(url) {
+        var m = url.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?(?:.*&)?v=|embed\/|shorts\/|live\/))([\w-]{11})/);
+        return m ? m[1] : null;
+      }
+
+      var videoId = getYouTubeId(trigger.dataset.youtubeUrl || "");
+      if (!videoId) {
+        console.warn("Podcast building video: valid YouTube link nahi mila.");
+        return;
+      }
+
+      // 1) Section ka thumbnail (HD, na mile to normal quality)
+      thumb.src = "https://img.youtube.com/vi/" + videoId + "/maxresdefault.jpg";
+      thumb.onerror = function () {
+        this.onerror = null;
+        this.src = "https://img.youtube.com/vi/" + videoId + "/hqdefault.jpg";
+      };
+
+      // 2) Modal khulte hi video, band hote hi stop
+      modalEl.addEventListener("show.bs.modal", function () {
+        frame.src = "https://www.youtube-nocookie.com/embed/" + videoId + "?autoplay=1&rel=0";
+      });
+      modalEl.addEventListener("hidden.bs.modal", function () {
+        frame.src = "";
+      });
+    })();
+  </script>
+  <script>
+// <!-- Episode Card Script -->
     // YouTube URL ya String se 11-digit Video ID extract karne ka helper function
     function extractYouTubeId(str) {
       if (!str) return null;
@@ -1111,11 +1135,8 @@
       if (guestTypeFilter) guestTypeFilter.addEventListener("change", filterAndSortEpisodes);
       if (sortControl) sortControl.addEventListener("change", filterAndSortEpisodes);
     });
-
-
-
-
   </script>
+
 
 </body>
 

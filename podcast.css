@@ -401,6 +401,10 @@ h1, h2, h3, h4, h5, h6, .font-heading {
     color: #ffffff;
 }
 
+.podcast-building-image {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
 
 /* =========================
    LABEL
@@ -439,14 +443,6 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 
     cursor: pointer;
 }
-
-
-.podcast-building-image {
-    aspect-ratio: 16 / 10;
-
-    object-fit: cover;
-}
-
 
 .podcast-building-play {
     width: 58px;
