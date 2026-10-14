@@ -11,7 +11,7 @@
    GLOBAL
 ========================= */
 .outline *{
-  border: 1px solid black;
+  border: 1px solid rgb(247, 244, 244);
 }
 
 
@@ -1385,7 +1385,7 @@ iframe {
 
 .comparison-title-card h3 {
   font-family: var(--support-column-title-font);
-  font-size: var(--support-column-title-size);
+  font-size: 20px;
   font-weight: var(--support-column-title-weight);
   color: var(--support-white);
   line-height: 1.4;
@@ -2076,7 +2076,7 @@ iframe {
 ========================================= */
 
 .ecosystem-diagram-container {
-  min-height: 620px;
+  min-height: 590px;
   width: 100%;
 }
 
@@ -2111,11 +2111,12 @@ iframe {
 
 .center-circle h2 {
   color: #1f2937 !important; /* Dark Title Text */
+  font-size: 20px;
 }
 
 .center-circle .supporting-line {
-  font-size: 0.75rem;
-  line-height: 1.3;
+  font-size: 13px;
+  /* line-height: 1.3; */
   color: #6b7280 !important; /* Muted Secondary Text */
 }
 

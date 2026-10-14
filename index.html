@@ -200,7 +200,7 @@
 
   <section class="podcast-section py-5">
 
-    <div class="container-fluid site-container py-lg-5">
+    <div class="container-fluid site-container">
 
       <!-- SECTION HEADER -->
       <div class="mb-4 mb-lg-5">
@@ -395,7 +395,7 @@
 
   <section class="support-section py-5">
 
-    <div class="container-fluid site-container py-lg-5">
+    <div class="container-fluid site-container">
 
       <!-- SAME ROW: LEFT CONTENT + RIGHT IMAGE -->
       <div class="row align-items-start g-4 g-lg-5">
@@ -437,12 +437,21 @@
 
             <!-- ROW 1: HEADERS -->
             <div class="col-sm-6">
-              <header class="comparison-title-card p-3 h-100">
+              <header class="comparison-title-card p-3 p-lg-4 h-100 d-flex align-items-center gap-3">
+                <!-- Icon Added Here -->
+                <div class="comparison-icon-box"
+                  style="color: #8f85ff; font-size: 24px; display: flex; align-items: center; justify-content: center;">
+                  <i class="bi bi-person-fill"></i>
+                </div>
                 <h3 class="mb-0 sora-600 people-shaping">Isolated First Generation Founder</h3>
-              </header>
+              </header>      
             </div>
             <div class="col-sm-6">
-              <header class="comparison-title-card p-3 h-100">
+              <header class="comparison-title-card p-3 p-lg-4 h-100 d-flex align-items-center gap-3">
+                <div class="comparison-icon-box"
+                  style="color: #8f85ff; font-size: 24px; display: flex; align-items: center; justify-content: center;">
+                  <i class="bi bi-people-fill"></i>
+                </div>
                 <h3 class="mb-0 sora-600">Professional Business Family</h3>
               </header>
             </div>
@@ -584,7 +593,7 @@
 
           <div class="ecosystem-card-container position-relative overflow-hidden rounded-4 my-5">
             <!-- Background Image Compliant with Image Policy -->
-            <img src="images/azim-profile-podcast-studio.png" alt="Home Pakistan Strategic Advisory Infrastructure"
+            <img src="images/studio-pic-4.jpeg" alt="Home Pakistan Strategic Advisory Infrastructure"
               class="img-fluid w-100 ecosystem-bg-img">
           </div>
 
@@ -766,15 +775,15 @@
      THE HOME PAKISTAN MODEL
 ========================================== -->
 
-  <section class="model-section py-5">
+  <section class="model-section py-5 ">
 
-    <div class="container-fluid site-container py-lg-5">
+    <div class="container-fluid site-container">
 
       <!-- =================================
          SECTION HEADER
     ================================== -->
 
-      <div class="model-header mb-4 mb-lg-5">
+      <div class="model-header">
 
         <div class="d-flex align-items-center gap-2 mb-3">
 
@@ -787,9 +796,9 @@
         </div>
 
 
-        <h2 class="model-heading mb-3 sora-700">
+        <h6 class="model-heading mb-3 sora-700">
           A Serious Ecosystem For Serious Business Building
-        </h2>
+        </h6>
 
 
         <p class="model-intro mb-0 inter-400 ">
@@ -803,11 +812,11 @@
 
 
 
-      <section class="ecosystem-section py-3 position-relative">
+      <section class="ecosystem-section position-relative">
         <div class="container">
 
           <!-- CENTRAL ECOSYSTEM DIAGRAM WRAPPER -->
-          <div class="ecosystem-diagram-container position-relative my-3">
+          <div class="ecosystem-diagram-container position-relative">
 
             <!-- SVG CONNECTING LINES (DESKTOP) -->
             <svg class="connecting-lines d-none d-lg-block position-absolute top-0 start-0 w-100 h-100"
@@ -823,8 +832,8 @@
             <!-- CENTER CIRCLE -->
             <div class="center-circle-wrapper d-flex align-items-center justify-content-center">
               <div
-                class="center-circle text-center p-4 rounded-circle d-flex flex-column justify-content-center align-items-center">
-                <h2 class="h5 mb-1 sora-700">Professional Business Family</h2>
+                class="center-circle text-center p-2 rounded-circle d-flex flex-column justify-content-center align-items-center">
+                <h2 class="mb-1 sora-700">Professional Business Family</h2>
                 <span class="supporting-line inter-400 small">Home Pakistan Venture Studio Ecosystem</span>
               </div>
             </div>
@@ -898,7 +907,7 @@
          BUTTON
     ================================== -->
 
-      <div class="my-3 text-center">
+      <div class="mt-3 text-center">
 
         <a href="./about.html#journeySection" class="btn model-btn
                d-inline-flex
@@ -927,31 +936,21 @@
      SECTION 9 - STUDIO GALLERY
 ========================================== -->
 
-  <section class="studio-section py-5">
-
-    <div class="container-fluid site-container py-lg-5">
-
+  <section class="studio-section py-3">
+    <div class="container-fluid site-container py-4">
       <!-- ================================
          SECTION HEADER
     ================================= -->
-
-      <div class="studio-header mb-4 mb-lg-5">
-
+      <div class="studio-header">
         <div class="d-flex align-items-center gap-2 mb-3">
-
           <span class="studio-dot"></span>
-
           <span class="studio-eyebrow inter-700">
             INSIDE THE STUDIO
           </span>
-
         </div>
-
-
-        <h2 class="studio-heading text-white mb-0 sora-700">
+        <h2 class="studio-heading text-white mb-3 sora-700">
           A Space For Serious Dialogue
         </h2>
-
       </div>
 
 
@@ -965,51 +964,35 @@
            LEFT SIDE - IMAGES
       ================================= -->
 
-        <div class="col-12 col-lg-8">
+      <div class="col-12 col-lg-8">
+        <div class="row g-2 h-100">
 
-          <div class="row g-3 h-100">
-
-            <!-- TOP LARGE IMAGE -->
-            <div class="col-12">
-
-              <div class="studio-image-box studio-image-large">
-
-                <img src="./images/studio-pic-1.jpeg" alt="Home Pakistan studio conversation"
-                  class="img-fluid w-100 h-100 object-fit-cover">
-
-              </div>
-
+          <!-- TOP LARGE IMAGE -->
+          <div class="col-12">
+            <div class="studio-image-box overflow-hidden rounded-3" style="aspect-ratio: 21/9; max-height: 220px;">
+              <img src="./images/studio-pic-1.jpeg" alt="Home Pakistan studio conversation"
+                class="img-fluid w-100 h-100 object-fit-cover">
             </div>
+          </div>
 
-
-            <!-- BOTTOM LEFT -->
-            <div class="col-12 col-sm-6">
-
-              <div class="studio-image-box studio-image-small">
-
-                <img src="./images/studio-pic-2.jpeg" alt="Home Pakistan recording setup"
-                  class="img-fluid w-100 h-100 object-fit-cover">
-
-              </div>
-
+          <!-- BOTTOM LEFT -->
+          <div class="col-12 col-sm-6">
+            <div class="studio-image-box overflow-hidden rounded-3" style="aspect-ratio: 16/9; max-height: 180px;">
+              <img src="./images/studio-pic-2.jpeg" alt="Home Pakistan recording setup"
+                class="img-fluid w-100 h-100 object-fit-cover">
             </div>
+          </div>
 
-
-            <!-- BOTTOM RIGHT -->
-            <div class="col-12 col-sm-6">
-
-              <div class="studio-image-box studio-image-small">
-
-                <img src="./images/studio-pic-4.jpeg" alt="Home Pakistan studio production"
-                  class="img-fluid w-100 h-100 object-fit-cover">
-
-              </div>
-
+          <!-- BOTTOM RIGHT -->
+          <div class="col-12 col-sm-6">
+            <div class="studio-image-box overflow-hidden rounded-3" style="aspect-ratio: 16/9; max-height: 180px;">
+              <img src="./images/studio-pic-4.jpeg" alt="Home Pakistan studio production"
+                class="img-fluid w-100 h-100 object-fit-cover">
             </div>
-
           </div>
 
         </div>
+      </div>
 
 
         <!-- ================================
@@ -1028,7 +1011,7 @@
               p-4 p-md-5">
 
             <h3 class="studio-card-title text-white mb-3 sora-700">
-              A place for real dialogue.
+              A Place For Real Dialogue.
             </h3>
 
             <p class="studio-card-copy mb-0 sora-400">
@@ -1051,9 +1034,9 @@
      SECTION 8 - JOIN THE ECOSYSTEM
 ========================================== -->
 
-  <section class="join-section py-5">
+  <section class="join-section py-5 ">
 
-    <div class="container-fluid site-container py-lg-5">
+    <div class="container-fluid site-container">
 
       <!-- SECTION HEADER -->
       <div class="join-header mb-4 mb-lg-5">
@@ -1078,23 +1061,28 @@
 
         <!-- CARD 1 -->
         <div class="col-12 col-md-6 col-lg-4">
-
           <div class="join-card h-100 d-flex flex-column p-4"
             onclick="window.location.href='application.html?tab=mentor#applicationSection'" style="cursor: pointer;">
-
-            <span class="join-number mb-4 sora-800">
-              01
-            </span>
-
+        
+            <!-- Icon Box (Number ki jagah icon aur secondary badge) -->
+            <div class="d-flex align-items-center justify-content-between mb-4">
+              <span class="join-number sora-800">
+                01
+              </span>
+              <div class="industry-icon mb-0">
+                <i class="bi bi-award" style="font-size: 20px;"></i>
+              </div>
+            </div>
+        
             <h3 class="join-card-title mb-3 sora-700">
               Join as a Mentor
             </h3>
-
+        
             <p class="join-card-copy mb-4 inter-400">
               Bring the experience, judgement and practical expertise
               that can help a business become stronger.
             </p>
-
+        
             <a href="application.html?tab=mentor#applicationSection" class="join-card-link sora-600
                    d-inline-flex
                    align-items-center
@@ -1103,74 +1091,74 @@
               <span>Apply as a Mentor</span>
               <i class="bi bi-arrow-right"></i>
             </a>
-
+        
           </div>
-
         </div>
 
-
-        <!-- CARD 2 -->
+        <!-- Card 2 -->
         <div class="col-12 col-md-6 col-lg-4">
-
           <div class="join-card h-100 d-flex flex-column p-4"
             onclick="window.location.href='application.html?tab=cofounder#applicationSection'" style="cursor: pointer;">
-
-            <span class="join-number mb-4 sora-800">
-              02
-            </span>
-
+        
+            <!-- Icon Box (Number ki jagah icon aur secondary badge) -->
+            <div class="d-flex align-items-center justify-content-between mb-4">
+              <span class="join-number sora-800">
+                02
+              </span>
+              <div class="industry-icon mb-0">
+                <i class="bi bi-person-gear" style="font-size: 20px;"></i>
+              </div>
+            </div>
+        
             <h3 class="join-card-title mb-3 sora-700">
               Join as a Co Founder
             </h3>
-
+        
             <p class="join-card-copy mb-4 inter-400">
               Bring your skills, passion and willingness to build
               alongside a team and a business opportunity.
             </p>
-
-            <a href="application.html?tab=cofounder#applicationSection" class="join-card-link sora-600
-                   d-inline-flex
-                   align-items-center
-                   justify-content-between
-                   mt-auto">
+        
+            <a href="application.html?tab=cofounder#applicationSection" class="join-card-link sora-600 d-inline-flex align-items-center justify-content-between mt-auto">
               <span>Apply as a Co Founder</span>
               <i class="bi bi-arrow-right"></i>
             </a>
-
+        
           </div>
-
         </div>
 
-
-        <!-- CARD 3 -->
+        <!-- Card 3 -->
         <div class="col-12 col-md-6 col-lg-4">
-
           <div class="join-card h-100 d-flex flex-column p-4"
             onclick="window.location.href='application.html?tab=business#applicationSection'" style="cursor: pointer;">
-
-            <span class="join-number mb-4 sora-800">
-              03
-            </span>
-
+        
+            <!-- Icon Box (Number ki jagah icon aur secondary badge) -->
+            <div class="d-flex align-items-center justify-content-between mb-4">
+              <span class="join-number sora-800">
+                03
+              </span>
+              <div class="industry-icon mb-0">
+                <i class="bi bi-lightbulb" style="font-size: 20px;"></i>
+              </div>
+            </div>
+        
             <h3 class="join-card-title mb-3 sora-700">
               Bring a Business Idea
             </h3>
-
+        
             <p class="join-card-copy mb-4 inter-400">
               Bring a complete business idea or feasibility for review
               and tell us what you need to build it.
             </p>
-
+        
             <a href="application.html?tab=business#applicationSection"
               class="join-card-link sora-600 d-inline-flex align-items-center justify-content-between mt-auto">
               <span>Submit a Business Idea</span>
               <i class="bi bi-arrow-right"></i>
             </a>
-
+        
           </div>
-
         </div>
-
       </div>
 
     </div>
