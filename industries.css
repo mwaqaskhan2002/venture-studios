@@ -308,9 +308,7 @@ body.industries-page {
   z-index: 2;
   top: 15px;  /* Corner se thora neechay */
   left: 15px; /* Corner se thora agay */
-}
 
-.industry-icon {
   width: 70px;
   height: 70px;
   display: grid;
@@ -321,6 +319,7 @@ body.industries-page {
   color: #9B8CFF; 
   font-size: 30px;
 }
+
 
 /* .industry-card:hover .industry-icon {
   background: var(--industries-purple, #5c4ecc);
