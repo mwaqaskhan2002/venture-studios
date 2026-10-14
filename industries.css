@@ -304,8 +304,10 @@ body.industries-page {
 
 /* Step Number & Icon Z-Index Positioning & Visual Styling */
 .industry-icon {
-  position: relative;
+  position: absolute;
   z-index: 2;
+  top: 15px;  /* Corner se thora neechay */
+  left: 15px; /* Corner se thora agay */
 }
 
 .industry-icon {
