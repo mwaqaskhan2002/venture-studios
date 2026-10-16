@@ -1,0 +1,11 @@
+{
+    "VIDEO_ID": {
+      "guest": "Guest ka asli naam",
+      "guestOrg": "Organisation",
+      "guestType": "Founder",
+      "industry": "Technology",
+      "profile": "Guest ka asli profile",
+      "takeaways": ["...", "...", "..."],
+      "transcript": "Reviewed transcript"
+    }
+  }

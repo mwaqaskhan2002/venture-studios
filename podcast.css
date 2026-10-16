@@ -1444,3 +1444,77 @@ h1, h2, h3, h4, h5, h6, .font-heading {
     font-weight: 800 !important;
     font-style: normal;
 }
+
+
+
+/* Pagination ne jo cards chhupaye */
+.episode-item.page-hidden {
+  display: none !important;
+}
+
+#episodesContainer {
+  scroll-margin-top: 110px; /* navbar ki height ke hisaab se */
+}
+
+.episodes-pagination .pagination {
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.episodes-pagination .pagination .page-item .page-link {
+  min-width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  margin-left: 0;
+  padding: 0 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: none;
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.episodes-pagination .pagination .page-item .page-link:hover {
+  background: rgba(143, 133, 255, 0.16);
+  border-color: rgba(143, 133, 255, 0.55);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.episodes-pagination .pagination .page-item .page-link:focus-visible {
+  outline: 2px solid #8f85ff;
+  outline-offset: 2px;
+}
+
+.episodes-pagination .pagination .page-item.active .page-link {
+  background: #5c4ecc;
+  border-color: #5c4ecc;
+  color: #ffffff;
+  box-shadow: 0 8px 20px rgba(92, 78, 204, 0.4);
+  transform: none;
+}
+
+.episodes-pagination .pagination .page-item.disabled .page-link {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.episodes-pagination .pagination .page-item.page-ellipsis .page-link {
+  background: transparent;
+  border-color: transparent;
+  color: rgba(255, 255, 255, 0.5);
+  pointer-events: none;
+}
+
+@media (max-width: 575.98px) {
+  .episodes-pagination .pagination { gap: 6px; }
+  .episodes-pagination .pagination .page-item .page-link {
+    min-width: 38px;
+    height: 38px;
+    padding: 0 8px;
+  }
+}
